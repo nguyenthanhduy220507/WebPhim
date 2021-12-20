@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">    
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- main -->
+    <div id="main">
+        <!-- Begin: header -->
+        <div id="header">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-0 sm-0 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <ul class="col l-8 m-0 sm-0 nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="">Discover</a></li>
+                        <li>
+                            <a href="#">Category</a>
+                            <ul class="sub-nav">
+                                <li><a href="./Action-category.html">Action</a></li>
+                                <li><a href="./Adventure-category.html">Adventure</a></li>
+                                <li><a href="./Comedy-category.html">Comedy</a></li>
+                                <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                <li><a href="./Drama-category.html">Drama</a></li>
+                                <li><a href="./Historical-category.html">Historical</a></li>
+                                <li><a href="./Horror-category.html">Horror</a></li>
+                                <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <!-- navigation bar -->
+                    <div class="col l-0 m-2 sm-2 navbar-btn">
+                        <button onclick="nav_open()" type="button"><i class="ti-menu-alt"></i></button>
+                    </div>
+                    <!-- login -->
+                    <div class="col l-0 m-7 sm-6"></div>
+                    <div class="col l-1 m-2 sm-3 login-btn">
+                        <button onclick="login_open()">
+                            <i class="ti-user"></i>
+                            <span>login</span>
+                        </button>
+                    </div>
+                    <!-- search -->
+                    <div class="col l-1 m-1 sm-1 search-box">
+                        <a href="./search.html" class="button"><i class="ti-search"></i></a>
+                    </div>
+                    <!-- navigation on mobile & tablet -->
+                    <div class="nav-overlay" onclick="nav_exit()"></div>
+                    <div class="nav-mobile-tablet js-nav-mobile-tablet">
+                        <div class="social-list">
+                            <a href="https://www.facebook.com/">
+                                <i class="ti-facebook icons"></i>
+                            </a>
+                            <a href="http://google.com/">
+                                <i class="ti-google icons"></i>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <i class="ti-instagram icons"></i>
+                            </a>
+                            <a href="https://github.com/">
+                                <i class="ti-github icons"></i>
+                            </a>
+                        </div>
+                        <button type="button" onclick="nav_exit()" class="nav-mobile-tablet-close"><i class="ti-close"></i></button>
+                        <ul class="nav-list-mobile-tablet">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="">Discover</a></li>
+                            <li>
+                                <a href="#" onclick="category_open()">Category</a>
+                                <ul class="sub-nav-mobile-tablet">
+                                    <li><a href="./Action-category.html">Action</a></li>
+                                    <li><a href="./Adventure-category.html">Adventure</a></li>
+                                    <li><a href="./Comedy-category.html">Comedy</a></li>
+                                    <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                    <li><a href="./Drama-category.html">Drama</a></li>
+                                    <li><a href="./Historical-category.html">Historical</a></li>
+                                    <li><a href="./Horror-category.html">Horror</a></li>
+                                    <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
+                </div>
+            </div>
+        </div>
+        <!-- End: header -->
+        <div class="sub-web"></div>
+        <!-- Begin: content -->
+        <div id="content">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-8 m-12 sm-12 sub-main-content">
+                        <div class="sub-main-post">
+                            <div class="sub-post-header">
+                                <div class="sub-post-label">
+                                    <a href="./Adventure-category.html">Adventure/Historical</a>
+                                </div>
+                                <div class="sub-post-title">
+                                    <h2>Review series phim Sherlock: vẻ gợi cảm của bộ não thiên tài</h2>
+                                </div>
+                                <div class="sub-meta-date">
+                                    by <a href="https://www.facebook.com/cong.dang.January31/" title="author">Cong Dang</a>
+                                    - March 04 2021
+                                </div>
+                            </div>
+                            <div class="sub-post-entry">
+                                Nhắc đến cái tên Sherlock Holmes thì chắc chắn không còn ai xa lạ về 
+                                nhân vật thám tử cực kỳ nổi tiếng của tác giả Arthur Conan Doyle. 
+                                Series phim được phát hành từ năm 2010 đến 2017 với những vụ án kinh 
+                                điển mà chúng ta dường như từng được nhắc đến ở đâu đó trước đây.
+                                <br>
+                                <img src="./assets/img/Sherlock1.jpg" alt="Sherlock">
+                                <br><br>
+                                <h3> <p class="bold-text"> Review phim Sherlock </p></h3> 
+                                Trong seires phim truyền hình do đài BBC thực hiện, chúng ta được 
+                                một lần nữa nhìn thấy tài năng phá án của nhân vật này ở thời hiện 
+                                đại với kỹ năng quan sát và khả năng phân tích hiếm có của Sherlock 
+                                Holmes qua diễn xuất của nam diễn viên Benedict Cumberbatch (người 
+                                từng thủ vai Doctor Strange trong phim cùng tên phát hành năm 2016).
+                                Có thể qua những phim điện ảnh trước đây, chúng ta biết quá nhiều 
+                                về Sherlock Holmes như một thám tử đại tài nhưng luôn bỏ qua người 
+                                bạn thân luôn bên cạnh – bác sĩ Watson. Trong series truyền hình 
+                                này, người xem sẽ có cơ hội hiểu hơn về con người bác sĩ Watson và 
+                                mối quan hệ giữa hai người đàn ông.
+                                <br>
+                                <img src="./assets/img/Sherlock-2.jpg" alt="Sherlock">
+                                <br>
+                                Bên cạnh người bạn thân, chúng ta còn biết thêm về gia đình Sherlock 
+                                với một người anh trai làm việc cho MI6 và một cô em gái với khả năng 
+                                thông minh vượt trội hơn cả hai người anh của mình.
+                                <br>
+                                Ngoài ra, một nhân vật khác cũng khiến người xem ấn tượng không kém 
+                                khi sự thông minh của họ khiến Sherlock phải lưu ý. Nhân vật này sẽ 
+                                không được bật mí mà các bạn sẽ phải tự khám phá bằng cách thưởng 
+                                thức series Sherlock. Sau cùng là kẻ thù truyền kiếp của Sherlock 
+                                Holmes mang tên Moriarty – một tên tội phạm mà bạn sẽ khó lòng quên 
+                                được đấy!
+                                Nói về nội dung thì chúng ta sẽ theo chân ngài thám tử có gương mặt 
+                                lạnh lùng cùng ánh mắt sắc như dao tìm hiểu những vụ án gần như không 
+                                lời giải. Không có quá nhiều cuộc truy đuổi ngạt thở nhưng những cuộc 
+                                đấu trí sẽ khiến bạn thật sự shock nếu chưa từng theo dõi thể loại 
+                                phim này trước kia.
+                                <br>
+                                <img src="./assets/img/Sherlock-3.jpg" alt="Sherlock">
+                                <br>
+                                Và khi xem đến cuối series này, bạn sẽ bất ngờ với những điều vừa 
+                                phát hiện ra. Đôi khi, chúng sẽ khiến bạn xem lại cả mùa đầu tiên 
+                                của series đấy!
+                                Khung cảnh trong phim cũng được chọn lựa cẩn thận với viewpoint của 
+                                London, con phố Baker và những tạo hình quen thuộc khiến người xem 
+                                dễ dàng nhận ra khung cảnh ấy là nơi nào. Nhạc phim được chọn lựa kỹ 
+                                lưỡng với những giai điệu đẩy cảm xúc của người nghe trở nên cao trào 
+                                hơn theo những cuộc săn đuổi tội ác. Thật sự là một sự phối hợp nhuần 
+                                nhuyễn và tuyệt vời giữa âm thanh và hình ảnh.
+                                <br>
+                                Bên cạnh những yếu tố bên trên thì khả năng diễn xuất của Benedict 
+                                Cumberbatch chính là yếu tố quyết định thành công của series. Gương 
+                                mặt lạnh lùng, ánh mắt sắc lạnh và vẻ tự tin trong cách suy luận của 
+                                anh khiến người xem đầu tiên bị shock về một con người với khả năng 
+                                tư duy nhanh nhạy không ngờ.
+                                Cách diễn của anh cho người xem cảm nhận dường như đó không phải là 
+                                diễn mà chính anh là Sherlock Holmes thực sự. Anh khiến cho nhiều 
+                                người nhận ra “thế nào là sự sexy của một bộ não thông minh”. Quả 
+                                nhiên là thật tuyệt vời! tôi hoàn toàn bị thuyết phục bởi đôi mắt 
+                                sâu ẩn dưới hàng lông mày rậm và trí thông minh phía sau cái trán 
+                                kia. Gương mặt góc cạnh lạnh lùng quả nhiên đốn ngã bao nhiêu nữ khán 
+                                giả.
+                                <br>
+                                Benedict đã hoàn toàn thành công với vai diễn này và khiến khán giả 
+                                không ít lần phải “Ồ” lên bởi những tình huống gay cấn mà anh mang 
+                                đến. Vai Sherlock có thể nói là vai diễn thành công nhất của Benedict, 
+                                vượt trội hơn cả Dr. Strange.
+                                Thật sự mà nói thì tôi không muốn tiết lộ thêm những tình tiết khác 
+                                của phim bởi chúng sẽ khiến bạn giảm đi phần nào hào hứng khi xem. 
+                                Thế nên hãy dành thời gian cuối tuần để thưởng thức series này nhé!
+                                <br>
+                                Sẽ không khiến bạn thấy hối hận chút nào đâu!   
+                            </div>
+                            <div class="grid sub-post-meta">
+                                <div class="row">
+                                    <div class="col l-6 m-6 sm-6 entry-tags">
+                                        <p>
+                                            <i class="ti-tag"></i>
+                                            Tags: Adventure, Historical
+                                        </p>
+                                    </div>
+                                    <div class="col l-6 m-6 sm-6 sub-post-share">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook icons"></i>
+                                        </a>
+                                        <a href="http://google.com/">
+                                            <i class="ti-google icons"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram icons"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-blog-paper">
+                            <div class="row">
+                                <div class="col l-10 m-4 sm-0"></div>
+                                <div class="col l-2 m-8 sm-12">
+                                    <a href="./the-greatest-showman.html">Next Post <i class="ti-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-post-list">
+                            <h3>you may also like</h3>
+                            <div class="row">
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/The-greatest-showman-img.jpg" alt="The Greatest Showman">
+                                    <a href="./the-greatest-showman.html">'The Greatest Showman': vẻ đẹp của sự khác biệt</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="assets/img/Spider-man-no-way-home-img.jpg" alt="Spider Man">
+                                    <a href="./spider-man-no-way-home.html">'Spider-Man: No Way Home'</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Free-guy-img.jpg" alt="Free Guy">
+                                    <a href="./free-guy.html">'Free Guy' - khi người đàn ông mờ nhạt trở thành anh hùng</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-post-comments">
+                            <h3 class="comments-title">0 comments</h3>
+                            <div class="comments-holder">
+                                <ol class="comments-list">
+                                    <!-- comment 1 -->
+                                    <!-- <li class="grid comment">
+                                        <div class="row">
+                                            <div class="col l-1 avatar-img">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="col l-11 comment-block">
+                                                <div class="comment-header">
+                                                    <div class="user"></div>
+                                                    <div class="date-time"></div>
+                                                </div>
+                                                <p class="comment-content"></p>
+                                            </div>
+                                        </div>
+                                    </li> -->
+                                    <!-- end comment -->
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-1 m-0 sm-0"></div>
+                    <div class="col l-3 m-12 sm-12 sidebar-content">
+                        <div class="row">
+                            <div class="col l-12 sm-12 widget trailer">
+                                <h4 class="widget-title"><span>trailer</span></h4>
+                                <div class="video-trailer">
+                                    <video width="100%" height="100%" controls autoplay muted loop>
+                                        <source src="./assets/video/Sherlock.mp4" type="video/mp4">
+                                        Your browser does not support HTML video.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget follow-us">
+                                <h4 class="widget-title"><span>follow us</span></h4>
+                                <div class="widget-content">
+                                    <div class="widget-list">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                        <a href="https://twitter.com/">
+                                            <i class="ti-twitter"></i>
+                                        </a>
+                                        <a href="https://www.google.com/">
+                                            <i class="ti-google"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/">
+                                            <i class="ti-youtube"></i>
+                                        </a>
+                                        <a href="https://github.com/">
+                                            <i class="ti-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget labels">
+                                <h4 class="widget-title"><span>labels</span></h4>
+                                <div class="widget-content">
+                                  <span class="label"><a href="./Action-category.html">Action</a></span>
+                                    <span class="label"><a href="./Adventure-category.html">Adventure </a></span>
+                                    <span class="label"><a href="./Gangter-category.html">Crime & Gangster</a></span>
+                                    <span class="label"><a href="./Comedy-category.html">Comedy</a></span>
+                                    <span class="label"><a href="./Horror-category.html">Horror</a></span>
+                                    <span class="label"><a href="./Drama-category.html">Drama</a></span>
+                                    <span class="label"><a href="./Historical-category.html">Historical</a></span>
+                                    <span class="label"><a href="./Musical-Dance-category.html">Musical & Dance</a></span>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget recent-posts">
+                                <h4 class="widget-title"><span>recent posts</span></h4>
+                                <div class="row widget-content side-list">
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Arcane-img.jpg" alt="Arcane Jinx">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Arcane.html">Phân tích tập 9 Arcane</a></h4>
+                                                <p>29 Nov 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Eternals-img.png" alt="Eternals">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Eternals.html">Review: ETERNALS</a></h4>
+                                                <p>November 5 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/The-medium-img.jpg" alt="The medium">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Medium.html">Review The Medium</a></h4>
+                                                <p>July 10 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: content -->
+        <div class="line"></div>
+        <!-- Begin: footer -->
+        <div id="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-12 sm-12 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <div class="col l-8 m-12 sm-12 footer-logo">
+                        <a href="./index.html"><img src="assets/img/logo.jpg" alt="logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: footer -->
+    </div>
+    <!-- login / register -->
+    <div id="login-register" onclick="login_open()">
+        <div class="login-container fadeInDown" id="login">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
+            <div class="login-footer fadeIn fourth">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="login-container fadeInDown" id="register">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
+        </div>
+    </div>
+    <div class="to-top">
+        <a href="#main"><i class="ti-angle-up"></i></a>
+    </div>
+     <!-- js -->
+    <script src="./assets/javascript/script.js"></script>
+</body>
+</html>

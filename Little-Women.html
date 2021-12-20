@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">    
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- main -->
+    <div id="main">
+        <!-- Begin: header -->
+        <div id="header">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-0 sm-0 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <ul class="col l-8 m-0 sm-0 nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="">Discover</a></li>
+                        <li>
+                            <a href="#">Category</a>
+                            <ul class="sub-nav">
+                                <li><a href="./Action-category.html">Action</a></li>
+                                <li><a href="./Adventure-category.html">Adventure</a></li>
+                                <li><a href="./Comedy-category.html">Comedy</a></li>
+                                <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                <li><a href="./Drama-category.html">Drama</a></li>
+                                <li><a href="./Historical-category.html">Historical</a></li>
+                                <li><a href="./Horror-category.html">Horror</a></li>
+                                <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <!-- navigation bar -->
+                    <div class="col l-0 m-2 sm-2 navbar-btn">
+                        <button onclick="nav_open()" type="button"><i class="ti-menu-alt"></i></button>
+                    </div>
+                    <!-- login -->
+                    <div class="col l-0 m-7 sm-6"></div>
+                    <div class="col l-1 m-2 sm-3 login-btn">
+                        <button onclick="login_open()">
+                            <i class="ti-user"></i>
+                            <span>login</span>
+                        </button>
+                    </div>
+                    <!-- search -->
+                    <div class="col l-1 m-1 sm-1 search-box">
+                        <a href="./search.html" class="button"><i class="ti-search"></i></a>
+                    </div>
+                    <!-- navigation on mobile & tablet -->
+                    <div class="nav-overlay" onclick="nav_exit()"></div>
+                    <div class="nav-mobile-tablet js-nav-mobile-tablet">
+                        <div class="social-list">
+                            <a href="https://www.facebook.com/">
+                                <i class="ti-facebook icons"></i>
+                            </a>
+                            <a href="http://google.com/">
+                                <i class="ti-google icons"></i>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <i class="ti-instagram icons"></i>
+                            </a>
+                            <a href="https://github.com/">
+                                <i class="ti-github icons"></i>
+                            </a>
+                        </div>
+                        <button type="button" onclick="nav_exit()" class="nav-mobile-tablet-close"><i class="ti-close"></i></button>
+                        <ul class="nav-list-mobile-tablet">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="">Discover</a></li>
+                            <li>
+                                <a href="#" onclick="category_open()">Category</a>
+                                <ul class="sub-nav-mobile-tablet">
+                                    <li><a href="./Action-category.html">Action</a></li>
+                                    <li><a href="./Adventure-category.html">Adventure</a></li>
+                                    <li><a href="./Comedy-category.html">Comedy</a></li>
+                                    <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                    <li><a href="./Drama-category.html">Drama</a></li>
+                                    <li><a href="./Historical-category.html">Historical</a></li>
+                                    <li><a href="./Horror-category.html">Horror</a></li>
+                                    <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
+                </div>
+            </div>
+        </div>
+        <!-- End: header -->
+        <div class="sub-web"></div>
+        <!-- Begin: content -->
+        <div id="content">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-8 m-12 sm-12 sub-main-content">
+                        <div class="sub-main-post">
+                            <div class="sub-post-header">
+                                <div class="sub-post-label">
+                                    <a href="./Drama-category.html">Romance/Drama</a> 
+                                </div>
+                                <div class="sub-post-title">
+                                    <h2>'Little Women' - Tác phẩm đẹp đẽ về tình chị em và thiên tính nữ</h2>
+                                </div>
+                                <div class="sub-meta-date">
+                                    by <a href="https://www.facebook.com/cong.dang.January31/" title="author">Cong Dang</a>
+                                    - March 04 2021
+                                </div>
+                            </div>
+                            <div class="sub-post-entry">
+                                <p class="bold-text">TTO - 'Little Women' đẹp như một bức tranh cổ 
+                                    điển với váy áo và nhân vật thời Victoria thế kỷ 19 nhưng lại mang 
+                                    tư tưởng và tinh thần không hề cũ đối với nữ giới thế kỷ 21.</p> 
+                                Có một nỗi buồn xâm lấn người xem khi ngồi trong rạp theo dõi Little 
+                                Women (Những người phụ nữ bé nhỏ) vì tác phẩm đẹp đẽ này có số suất 
+                                chiếu khá ít ỏi tại Việt Nam khi khởi chiếu từ 7-2.
+                                Có lẽ, Little Women sẽ sớm khép lại hành trình tại Việt Nam như 
+                                Bombshell (Tin nóng), một phim được đề cử Oscar khác, cũng rất giàu 
+                                tính nữ.
+                                Chuyển thể từ tiểu thuyết lừng danh cùng tên của nhà văn Louisa May 
+                                Alcott, Little Women vừa trung thành với sách gốc, vừa tạo ra giá trị 
+                                mới thông qua diễn xuất đầy thấu cảm của dàn diễn viên thế hệ mới.
+                                <br>
+                                <img src="./assets/img/Little-Women.jpg" alt="Little Women">
+                                <br><br>
+                                <h3><p class="bold-text">  Hội tụ 6 nhân vật nữ điển hình </p></h3> 
+                                Little Women xoay quanh một gia đình Anh quốc nghèo khó ở thời Nữ 
+                                hoàng Victoria, thế kỷ 19. Họ có 4 cô con gái: Meg, Jo, Amy và Beth.
+                                <br>
+                                Người cha phải xa nhà, đi đánh thuê ở cuộc nội chiến Mỹ nhằm nuôi 
+                                sống gia đình, toàn bộ 4 cô con gái đều do một tay người mẹ nhân hậu 
+                                Marmee (Laura Dern) nuôi dạy.
+                                <br>
+                                Một phụ nữ khác có ảnh hưởng đến cuộc đời họ là bà dì độc thân March 
+                                (Meryl Streep), người sở hữu một gia sản lớn nhưng khó tính và cô độc.
+                                <br>
+                                Nhân vật chính của phim là Jo (Saoirse Ronan), con gái thứ hai của 
+                                nhà March và cũng là người cá tính, mạnh mẽ nhất và có gương mặt như 
+                                một bức tranh cổ điển. Cô ước mơ trở thành nhà văn, một mình đến New 
+                                York theo đuổi nghiệp viết.
+                                <br>
+                                Jo giận dữ vì tất cả người lớn đều nói "phụ nữ chỉ có thể kết hôn hoặc 
+                                chết trong nghèo đói". Suốt thời tuổi trẻ, cô chống đối hôn nhân, 
+                                nỗ lực xây dựng cuộc đời độc lập.
+                                <br>
+                                <img src="./assets/img/little-women1.jpg" alt="Little Women">
+                                <br>
+                                Chị cả Meg (Emma Watson) - người chị, người mẹ của đàn em nhỏ - là 
+                                một bản sao của mẹ mình: thấu hiểu, bao dung và mơ ước một gia đình 
+                                yên bình. Kết hôn với người chồng cô rất mực yêu thương, Meg cũng có 
+                                lúc tủi phận vì chồng không giàu có.
+                                <br>
+                                Cô em út Beth (Eliza Scanlen) ngoan ngoãn, giàu lòng trắc ẩn và say 
+                                mê âm nhạc nhưng mắc trọng bệnh suốt thời niên thiếu.
+                                <br>
+                                Amy (Florence Pugh), con gái thứ ba trong gia đình, lại như một đối 
+                                trọng của Jo trên hành trình trưởng thành. Cô có chí tiến thủ, mơ 
+                                ước làm họa sĩ nổi tiếng ở Paris, tin chắc mình phải kết hôn với 
+                                người giàu có để thay đổi cuộc sống của cả gia đình.
+                                <br>
+                                Nhân vật và bối cảnh của Little Women đều bình dị. Đây là chuyện về 
+                                những người phụ nữ "bé mọn" ("bé nhỏ" cũng đúng, nhưng ít sắc thái 
+                                thân phận hơn) ở một làng quê nước Anh.
+                                <br>
+                                Không phải tất cả đều mơ những điều lớn lao, nhưng bộ phim sẽ rất 
+                                nông cạn nếu chỉ cổ xúy cho những ước mơ lớn lao, như của Jo hay Amy. 
+                                Trái lại, cả 6 người phụ nữ đều được cất lên tiếng nói.
+                                <br>
+                                "Ước mơ của chị khác em nhưng không có nghĩa là nó không quan trọng", 
+                                Meg nói với Jo trong ngày cưới.
+                                <br>
+                                "Ta có quyền không kết hôn vì ta giàu có", dì March nói với Jo trong 
+                                một cảnh phim hài hước nhưng không kém phần sâu cay. Với xuất thân 
+                                nghèo khổ và thời thanh niên khó nhọc, Jo không thể dễ dàng sống độc 
+                                thân trong xã hội hà khắc thời bấy giờ.
+                                <br><br>
+                                <h3><p class="bold-text">Thiên tính nữ không chỉ là sự mềm mại</p></h3>
+                                Little Women không thiếu chất nữ quyền, thể hiện qua nhân vật chính 
+                                Jo, nhưng không có nghĩa là phim thiếu mềm mại. Đồng thời, dù ngập 
+                                trong váy áo, dạ tiệc và tình yêu thương cảm động của những người đàn 
+                                bà, phim vẫn rất cứng cỏi khi cất lên tiếng nói nữ quyền.
+                                <br>
+                                <img src="./assets/img/Little-Women-Post.jpg" alt="Little Women"> 
+                                <br>
+                                Nhân vật Jo là một cô gái rất đàn ông: thích mặc đồ nam, sẵn sàng 
+                                bán mái tóc dài để giúp mẹ, vô tư ôm vai bá cổ cậu bạn hàng xóm 
+                                Laurie (Timothée Chalamet) như hai thằng con trai, dù Laurie yêu cô.
+                                <br>
+                                Nhưng dường như thái độ chống đối của Jo với hôn nhân hay những lề 
+                                thói xã hội là cách nổi loạn của cô gái nghèo bất bình trước những 
+                                quy chuẩn bó buộc phụ nữ.
+                                <br>
+                                Còn về bản chất, Jo vẫn rất đàn bà: hết mực thương yêu mẹ và các em, 
+                                đặc biệt là mối gắn kết với cô chị Meg và tình thương vô bờ dành cho 
+                                em út Beth. Jo từng tàn nhẫn trừng phạt Amy vì một lỗi lầm, nhưng 
+                                sau những vấp ngã trên đường đời, cô lại trở nên bao dung và chúc 
+                                phúc cho Amy.
+                                <br>
+                                Cũng chính Jo là người yêu thương gia đình đến mức viết nên tác phẩm 
+                                văn học về gia đình mình, với cảm nhận sâu sắc về các chị em, thấu 
+                                hiểu tính cách và số phận từng người. Đó chính là thiên tính nữ dữ 
+                                dội ở cô.
+                                <br>
+                                Greta Gerwig, đạo diễn của phim là một phụ nữ duyên dáng và giàu 
+                                thấu cảm, trước từng là diễn viên. Chị là người làm nên Lady Bird 
+                                (2017), bộ phim về hành trình trưởng thành của một thiếu nữ cũng 
+                                do Saoirse Ronan đóng chính.
+                                <br>
+                                Cả Lady Bird và Little Women đều được đề cử Oscar Phim hay nhất và 
+                                Nữ diễn viên chính xuất sắc cho Ronan.
+                                <br>
+                                Little Women là sự kết hợp của không chỉ 2, mà là rất nhiều phụ 
+                                nữ tài năng: Gerwig, Ronan và Laura Dern, Meryl Streep, Emma Watson, 
+                                Florence Pugh (được đề cử Oscar Nữ diễn viên phụ xuất sắc cho vai 
+                                Amy). Phim nhận 6 đề cử Oscar, sẽ công bố ngày 9-2.
+                            </div>
+                            <div class="grid sub-post-meta">
+                                <div class="row">
+                                    <div class="col l-6 m-6 sm-6 entry-tags">
+                                        <p>
+                                            <i class="ti-tag"></i>
+                                            Tags: Romance, Drama
+                                        </p>
+                                    </div>
+                                    <div class="col l-6 m-6 sm-6 sub-post-share">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook icons"></i>
+                                        </a>
+                                        <a href="http://google.com/">
+                                            <i class="ti-google icons"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram icons"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-blog-paper">
+                            <div class="row">
+                                <div class="col l-10 m-4 sm-0"></div>
+                                <div class="col l-2 m-8 sm-12">
+                                    <a href="./Medium.html">Next Post <i class="ti-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-post-list">
+                            <h3>you may also like</h3>
+                            <div class="row">
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/The-medium-img.jpg" alt="Medium">
+                                    <a href="./Medium.html">Review The Medium</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Pi-img.jpg" alt="Pi">
+                                    <a href="./Pi.html">'Life of Pi': Hành trình chông gai và những bài học vàng</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Sherlock-img.jpg" alt="Sherlock">
+                                    <a href="./Sherlock.html">Review series phim Sherlock: vẻ gợi cảm của bộ não thiên tài</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-post-comments">
+                            <h3 class="comments-title">0 comments</h3>
+                            <div class="comments-holder">
+                                <ol class="comments-list">
+                                    <!-- comment 1 -->
+                                    <!-- <li class="grid comment">
+                                        <div class="row">
+                                            <div class="col l-1 avatar-img">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="col l-11 comment-block">
+                                                <div class="comment-header">
+                                                    <div class="user"></div>
+                                                    <div class="date-time"></div>
+                                                </div>
+                                                <p class="comment-content"></p>
+                                            </div>
+                                        </div>
+                                    </li> -->
+                                    <!-- end comment -->
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-1 m-0 sm-0"></div>
+                    <div class="col l-3 m-12 sm-12 sidebar-content">
+                        <div class="row">
+                            <div class="col l-12 sm-12 widget trailer">
+                                <h4 class="widget-title"><span>trailer</span></h4>
+                                <div class="video-trailer">
+                                    <video width="100%" height="100%" controls autoplay muted loop> tải về bỏ vô mục video rồi ghi nguồn là đc
+                                        <source src="./assets/video/Little-Women.mp4" type="video/mp4"> này postr video như video này là 1080 k nha lên tải về mày bỏ vô mục video
+                                        Your browser does not support HTML video.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget follow-us">
+                                <h4 class="widget-title"><span>follow us</span></h4>
+                                <div class="widget-content">
+                                    <div class="widget-list">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                        <a href="https://twitter.com/">
+                                            <i class="ti-twitter"></i>
+                                        </a>
+                                        <a href="https://www.google.com/">
+                                            <i class="ti-google"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/">
+                                            <i class="ti-youtube"></i>
+                                        </a>
+                                        <a href="https://github.com/">
+                                            <i class="ti-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget labels">
+                                <h4 class="widget-title"><span>labels</span></h4>
+                                <div class="widget-content">
+                                   <span class="label"><a href="./Action-category.html">Action</a></span>
+                                    <span class="label"><a href="./Adventure-category.html">Adventure </a></span>
+                                    <span class="label"><a href="./Gangter-category.html">Crime & Gangster</a></span>
+                                    <span class="label"><a href="./Comedy-category.html">Comedy</a></span>
+                                    <span class="label"><a href="./Horror-category.html">Horror</a></span>
+                                    <span class="label"><a href="./Drama-category.html">Drama</a></span>
+                                    <span class="label"><a href="./Historical-category.html">Historical</a></span>
+                                    <span class="label"><a href="./Musical-Dance-category.html">Musical & Dance</a></span>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget recent-posts">
+                                <h4 class="widget-title"><span>recent posts</span></h4>
+                                <div class="row widget-content side-list">
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Arcane-img.jpg" alt="Arcane Jinx">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Arcane.html">Review Series Arcane</a></h4>
+                                                <p>29 Nov 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Eternals-img.png" alt="Eternals">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Eternals.html">Review: ETERNALS</a></h4>
+                                                <p>November 5 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/The-medium-img.jpg" alt="The medium">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Medium.html">Review The Medium</a></h4>
+                                                <p>July 10 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: content -->
+        <div class="line"></div>
+        <!-- Begin: footer -->
+        <div id="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-12 sm-12 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <div class="col l-8 m-12 sm-12 footer-logo">
+                        <a href="./index.html"><img src="assets/img/logo.jpg" alt="logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: footer -->
+    </div>
+    <!-- login / register -->
+    <div id="login-register" onclick="login_open()">
+        <div class="login-container fadeInDown" id="login">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
+            <div class="login-footer fadeIn fourth">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="login-container fadeInDown" id="register">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
+        </div>
+    </div>
+    <div class="to-top">
+        <a href="#main"><i class="ti-angle-up"></i></a>
+    </div>
+     <!-- js -->
+    <script src="./assets/javascript/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">    
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- main -->
+    <div id="main">
+        <!-- Begin: header -->
+        <div id="header">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-0 sm-0 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <ul class="col l-8 m-0 sm-0 nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="">Discover</a></li>
+                        <li>
+                            <a href="#">Category</a>
+                            <ul class="sub-nav">
+                                <li><a href="./Action-category.html">Action</a></li>
+                                <li><a href="./Adventure-category.html">Adventure</a></li>
+                                <li><a href="./Comedy-category.html">Comedy</a></li>
+                                <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                <li><a href="./Drama-category.html">Drama</a></li>
+                                <li><a href="./Historical-category.html">Historical</a></li>
+                                <li><a href="./Horror-category.html">Horror</a></li>
+                                <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <!-- navigation bar -->
+                    <div class="col l-0 m-2 sm-2 navbar-btn">
+                        <button onclick="nav_open()" type="button"><i class="ti-menu-alt"></i></button>
+                    </div>
+                    <!-- login -->
+                    <div class="col l-0 m-7 sm-6"></div>
+                    <div class="col l-1 m-2 sm-3 login-btn">
+                        <button onclick="login_open()">
+                            <i class="ti-user"></i>
+                            <span>login</span>
+                        </button>
+                    </div>
+                    <!-- search -->
+                    <div class="col l-1 m-1 sm-1 search-box">
+                        <a href="./search.html" class="button"><i class="ti-search"></i></a>
+                    </div>
+                    <!-- navigation on mobile & tablet -->
+                    <div class="nav-overlay" onclick="nav_exit()"></div>
+                    <div class="nav-mobile-tablet js-nav-mobile-tablet">
+                        <div class="social-list">
+                            <a href="https://www.facebook.com/">
+                                <i class="ti-facebook icons"></i>
+                            </a>
+                            <a href="http://google.com/">
+                                <i class="ti-google icons"></i>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <i class="ti-instagram icons"></i>
+                            </a>
+                            <a href="https://github.com/">
+                                <i class="ti-github icons"></i>
+                            </a>
+                        </div>
+                        <button type="button" onclick="nav_exit()" class="nav-mobile-tablet-close"><i class="ti-close"></i></button>
+                        <ul class="nav-list-mobile-tablet">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="">Discover</a></li>
+                            <li>
+                                <a href="#" onclick="category_open()">Category</a>
+                                <ul class="sub-nav-mobile-tablet">
+                                    <li><a href="./Action-category.html">Action</a></li>
+                                    <li><a href="./Adventure-category.html">Adventure</a></li>
+                                    <li><a href="./Comedy-category.html">Comedy</a></li>
+                                    <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                    <li><a href="./Drama-category.html">Drama</a></li>
+                                    <li><a href="./Historical-category.html">Historical</a></li>
+                                    <li><a href="./Horror-category.html">Horror</a></li>
+                                    <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
+                </div>
+            </div>
+        </div>
+        <!-- End: header -->
+        <div class="sub-web"></div>
+        <!-- Begin: content -->
+        <div id="content">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-8 m-12 sm-12 sub-main-content">
+                        <div class="sub-main-post">
+                            <div class="sub-post-header">
+                                <div class="sub-post-label">
+                                    <a href="./Horror-category.html">Horror/Thriller</a>
+                                </div>
+                                <div class="sub-post-title">
+                                    <h2>'The Invisible Man': Tiếng nói nữ quyền về cuộc sống tự do</h2>
+                                </div>
+                                <div class="sub-meta-date">
+                                    by <a href="https://www.facebook.com/cong.dang.January31/" title="author">Cong Dang</a>
+                                    - March 04 2021
+                                </div>
+                            </div>
+                            <div class="sub-post-entry">
+                                <p class="bold-text">Trong The Invisible Man, Elisabeth Moss hóa 
+                                    thân thành người phụ nữ mạnh mẽ, tìm cách trốn chạy khỏi cuộc 
+                                    sống gia đình ngột ngạt luôn bị người yêu thiên tài kiểm soát.</p>
+                                <img src="./assets/img/Invisible-man1.jpg" alt="Invisible Man">
+                                The Invisible Man (tựa Việt: Kẻ vô hình) xoay quanh Cecilia Kass 
+                                (Elisabeth Moss), người yêu của Adrian (Oliver Jackson-Cohen), nhà 
+                                khoa học tiên phong trong lĩnh vực quang học và được rất nhiều cô gái 
+                                theo đuổi. Bề ngoài hoàn hảo là vậy nhưng thực chất, Adrian lại là 
+                                người vô cùng độc đoán. Anh tìm cách kiểm soát mọi hoạt động của 
+                                Cecilia Kass, thậm chí cả suy nghĩ hay hơi thở của cô.
+                                <br>
+                                Không chịu nổi cuộc sống gò bó với người yêu, Cecilia chạy trốn khỏi 
+                                Adrian và nương nhờ tại nhà một người bạn. Mọi chuyện tưởng chừng như 
+                                kết thúc thì Adrian được tuyên bố đã tự sát và để lại tài sản thừa kế 
+                                khổng lồ cho Cecilia. Thời gian sau đó, Cecilia cảm nhận được sự hiện 
+                                diện của Adrian xung quanh cuộc sống hiện tại của mình, nhưng điều kỳ 
+                                lạ là cô không thể nhìn thấy anh. Nỗi ám ảnh tìm ra chân tướng sự việc 
+                                và thoát khỏi sự kiểm soát của Adrian khiến Cecilia rơi vào trạng thái 
+                                hoảng loạn, bị nhiều người nghi ngờ về vấn đề tâm lý.
+                                <br>
+                                <img src="./assets/img/Invisible-man2.jpg" alt="Invisible Man">
+                                <br><br>
+                                <h3><p class="bold-text">Cuộc sống tràn ngập những điều vô hình đáng 
+                                    sợ</p></h3> 
+                                The Invisible Man là một bước khởi đầu cho sự phục hưng của Universal. 
+                                Ngay từ phút đầu tiên, phim đã đem đến sự căng thẳng, hồi hộp cho 
+                                người xem. Những tình tiết bí ẩn tạo sự tò mò cho khán giả, màu sắc 
+                                u tối và âm nhạc đậm chất huyền bí mở ra một thế giới có phần viễn 
+                                tưởng của con người. Thế lực đáng sợ vô hình dõi theo nữ nhân vật 
+                                chính không phải là ma quỷ hay người ngoài hành tinh, mà lại chính 
+                                là anh chàng người yêu cô từng có quãng thời gian dài chung sống.
+                                <br>
+                                Tiêu đề The Invisible Man gợi ra không gian tăm tối đúng như tông 
+                                màu chủ đạo trong tác phẩm, là ẩn dụ về những điều đáng sợ vô hình 
+                                luôn đe doạ cuộc sống con người. Có những thứ ta không thể nhìn thấy 
+                                bằng mắt thường nhưng lại can thiệp vào cuộc sống, kiểm soát và hủy 
+                                hoại bản thân chúng ta.
+                                <br>
+                                Giống như kẻ vô hình tuy không thể nhìn, không thể sờ thấy được 
+                                nhưng sự có mặt của hắn luôn được đánh dấu bằng những xáo trộn, 
+                                từ con dao trong bếp, vết chân trên tấm chăn, hay lọ thuốc dính 
+                                máu... Sự vô hình ấy là tấm áo giáp bên ngoài, là phương tiện để 
+                                thực hiện những dã tâm ích kỷ của một con người khôn ngoan, luôn 
+                                toan tính và thích chiếm đoạt người khác.
+                                <br>
+                                Phim mô tả chậm rãi, từ tốn những khoảng không gian vắng lặng, báo 
+                                hiệu điều không hay xảy ra. Những cảnh quay rộng và lia máy quay 
+                                chậm tạo sự hồi hộp cho người xem, khiến họ cùng chung một cảm giác 
+                                lo lắng với nữ nhân vật. Cả bộ phim rất ít khi sử dụng jump-scare 
+                                (hù dọa), vốn là đặc trưng của dòng phim tâm lý kinh dị, nhưng vẫn 
+                                mang đến sự căng thẳng và kịch tính cần thiết.
+                                <br><br>
+                                <h3><p class="bold-text"> Tranh đấu chống lại bạo lực và sự thao túng</p></h3> 
+                                Nhân vật Cecilia là hình ảnh biểu trưng cho những người phụ nữ đáng 
+                                thương, bất đắc dĩ trở thành nạn nhân của chứng bạo hành gia đình, bị 
+                                kiềm tỏa và khống chế về mọi mặt. Sống trong “nhà tù” như thế, 
+                                Cecilia dần đánh mất đi niềm vui và không còn là chính mình. Cô 
+                                thay đổi từ một cô gái thụ động trở thành người phụ nữ khao khát 
+                                tự do mãnh liệt, chủ động tìm cách chạy trốn để thoát khỏi cuộc 
+                                sống ngột ngạt và nhiều áp lực.
+                                <br>
+                                <img src="./assets/img/Invisible-man3.jpg" alt="Invisible Man">
+                                <br>
+                                Khi tác phẩm trôi về 1/3 thời lượng cuối cùng, khán giả thấy được sự 
+                                toan tính của Cecilia. Cô không còn chút sợ hãi, khoan nhượng trước 
+                                một người yêu tàn bạo, đến phút cuối vẫn không chịu thừa nhận sai lầm 
+                                của bản thân. Cecilia đã cho anh ta cơ hội để tự thú nhận những hành 
+                                vi sai trái mình đã làm. Nhưng rồi, cô bật khóc vì biết rằng Adrian 
+                                mãi mãi vẫn chỉ là một kẻ ích kỷ, vô lương tâm, buộc cô phải đưa đến 
+                                quyết định chính tay mình sẽ là người chấm dứt mối quan hệ ác mộng.
+                                <br>
+                                Elisabeth Moss là điểm cộng của The Invisible Man. Cô tiếp tục chứng 
+                                minh khả năng đảm đương các vai diễn sang chấn tâm lý. Xuất hiện với 
+                                dáng vẻ tiều tụy, xơ xác ngay giữa căn biệt thự tuyệt đẹp nhìn ra biển, 
+                                người xem cảm nhận được sự lo lắng, mệt mỏi của Cecilia trong đôi mắt 
+                                thâm quầng hay làn da thâm nám. Nữ diễn viên giữ vững được mạch tâm 
+                                lý của nhân vật như thể đó là cuộc sống của cô ngoài đời. Việc hóa 
+                                thân từ một người có tinh thần bất ổn sang một kẻ gian xảo để chống 
+                                trả kẻ thù không hề khó với Elisabeth Moss. Cô làm tốt đến mức dễ 
+                                đánh lừa khán giả trong nhiều tình huống, khiến người xem tò mò và 
+                                muốn theo dõi quá trình phát triển của nhân vật.
+                                <br>
+                                The Invisible Man cũng nêu bật thông điệp phê phán về những mối 
+                                quan hệ lạm dụng, thích kiểm soát và ưa bạo lực của đàn ông. Tác 
+                                phẩm đại diện cho tiếng nói nữ quyền mạnh mẽ, khi người phụ nữ muốn 
+                                được làm chủ cuộc sống của chính mình chứ không đặt nó dưới bàn tay 
+                                thao túng của đàn ông.
+                            </div>
+                            <div class="grid sub-post-meta">
+                                <div class="row">
+                                    <div class="col l-6 m-6 sm-6 entry-tags">
+                                        <p>
+                                            <i class="ti-tag"></i>
+                                            Tags: Horror, Thriller
+                                        </p>
+                                    </div>
+                                    <div class="col l-6 m-6 sm-6 sub-post-share">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook icons"></i>
+                                        </a>
+                                        <a href="http://google.com/">
+                                            <i class="ti-google icons"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram icons"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-blog-paper">
+                            <div class="row">
+                                <div class="col l-10 m-4 sm-0"></div>
+                                <div class="col l-2 m-8 sm-12">
+                                    <a href="./Joker.html">Next Post <i class="ti-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-post-list">
+                            <h3>you may also like</h3>
+                            <div class="row">
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Joker-img.jpg" alt="Joker">
+                                    <a href="./Joker.html">'Joker': Tiếng nói thức tỉnh lương tri để xã hội không có những “Gã hề”</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Little-women-img.jpg" alt="Little Women">
+                                    <a href="./Little-Women.html">'Little Women' Tác phẩm đẹp đẻ về tình chị em và thiên tính nữ</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/The-medium-img.jpg" alt="Medium">
+                                    <a href="./Medium.html">Review The The-Medium</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-post-comments">
+                            <h3 class="comments-title">0 comments</h3>
+                            <div class="comments-holder">
+                                <ol class="comments-list">
+                                    <!-- comment 1 -->
+                                    <!-- <li class="grid comment">
+                                        <div class="row">
+                                            <div class="col l-1 avatar-img">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="col l-11 comment-block">
+                                                <div class="comment-header">
+                                                    <div class="user"></div>
+                                                    <div class="date-time"></div>
+                                                </div>
+                                                <p class="comment-content"></p>
+                                            </div>
+                                        </div>
+                                    </li> -->
+                                    <!-- end comment -->
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-1 m-0 sm-0"></div>
+                    <div class="col l-3 m-12 sm-12 sidebar-content">
+                        <div class="row">
+                            <div class="col l-12 sm-12 widget trailer">
+                                <h4 class="widget-title"><span>trailer</span></h4>
+                                <div class="video-trailer">
+                                    <video width="100%" height="100%" controls autoplay muted loop>
+                                        <source src="./assets/video/The-Invisible-Man.mp4" type="video/mp4">
+                                        Your browser does not support HTML video.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget follow-us">
+                                <h4 class="widget-title"><span>follow us</span></h4>
+                                <div class="widget-content">
+                                    <div class="widget-list">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                        <a href="https://twitter.com/">
+                                            <i class="ti-twitter"></i>
+                                        </a>
+                                        <a href="https://www.google.com/">
+                                            <i class="ti-google"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/">
+                                            <i class="ti-youtube"></i>
+                                        </a>
+                                        <a href="https://github.com/">
+                                            <i class="ti-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget labels">
+                                <h4 class="widget-title"><span>labels</span></h4>
+                                <div class="widget-content">
+                                    <span class="label"><a href="./Action-category.html">Action</a></span>
+                                    <span class="label"><a href="./Adventure-category.html">Adventure </a></span>
+                                    <span class="label"><a href="./Gangter-category.html">Crime & Gangster</a></span>
+                                    <span class="label"><a href="./Comedy-category.html">Comedy</a></span>
+                                    <span class="label"><a href="./Horror-category.html">Horror</a></span>
+                                    <span class="label"><a href="./Drama-category.html">Drama</a></span>
+                                    <span class="label"><a href="./Historical-category.html">Historical</a></span>
+                                    <span class="label"><a href="./Musical-Dance-category.html">Musical & Dance</a></span>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget recent-posts">
+                                <h4 class="widget-title"><span>recent posts</span></h4>
+                                <div class="row widget-content side-list">
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Arcane-img.jpg" alt="Arcane Jinx">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Arcane.html">Phân tích tập 9 Arcane</a></h4>
+                                                <p>29 Nov 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Eternals-img.png" alt="Eternals">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Eternals.html">Review: ETERNALS</a></h4>
+                                                <p>November 5 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/The-medium-img.jpg" alt="The medium">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Medium.html">Review The Medium</a></h4>
+                                                <p>July 10 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: content -->
+        <div class="line"></div>
+        <!-- Begin: footer -->
+        <div id="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-12 sm-12 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <div class="col l-8 m-12 sm-12 footer-logo">
+                        <a href="./index.html"><img src="assets/img/logo.jpg" alt="logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: footer -->
+    </div>
+    <!-- login / register -->
+    <div id="login-register" onclick="login_open()">
+        <div class="login-container fadeInDown" id="login">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
+            <div class="login-footer fadeIn fourth">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="login-container fadeInDown" id="register">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
+        </div>
+    </div>
+    <div class="to-top">
+        <a href="#main"><i class="ti-angle-up"></i></a>
+    </div>
+     <!-- js -->
+    <script src="./assets/javascript/script.js"></script>
+</body>
+</html>

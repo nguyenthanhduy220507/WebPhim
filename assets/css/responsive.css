@@ -1,0 +1,64 @@
+@media (min-width: 1024px) {
+    #footer .social-list {
+        line-height: 195px;
+    }
+    #footer {
+        min-height: 195px;
+    }
+    #footer .social-list .icons {
+        font-size: 12px;
+    }
+    .slideshow .title-slider h4 a,
+    .post-item .post-item-title a,
+    .main-post .post-title a {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .hidden {
+        display: none;
+    }
+    #footer .social-list {
+        text-align: center;
+    }
+    #footer .social-list a {
+        width: 40px;
+    }
+    .post-item .post-item-title a,
+    #footer .social-list .icons {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 739px) {
+    .sub-post-entry,
+    .entry-tags p,
+    .comment,
+    .sub-post-item a,
+    .sub-post-share a,
+    .entry-tags p,
+    .post-item-title,
+    .post-item-entry,
+    .main-post .category-name-post,
+    .main-post .post-title,
+    .main-post .post-content,
+    .main-post .more-link {
+        padding: 0 10px;
+    }
+    .main-post .post-title a {
+        font-size: 18px;
+    }
+    .sub-post-list h3 {
+        padding: 0 10px 20px;
+    }
+    .comments-title {
+        padding: 10px 10px;
+    }
+}
+
+@media (min-width: 600px) {
+    #header .login-btn {
+        text-align: right;
+    }    
+}

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">    
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- main -->
+    <div id="main">
+        <!-- Begin: header -->
+        <div id="header">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-0 sm-0 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <ul class="col l-8 m-0 sm-0 nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="">Discover</a></li>
+                        <li>
+                            <a href="#">Category</a>
+                            <ul class="sub-nav">
+                                <li><a href="./Action-category.html">Action</a></li>
+                                <li><a href="./Adventure-category.html">Adventure</a></li>
+                                <li><a href="./Comedy-category.html">Comedy</a></li>
+                                <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                <li><a href="./Drama-category.html">Drama</a></li>
+                                <li><a href="./Historical-category.html">Historical</a></li>
+                                <li><a href="./Horror-category.html">Horror</a></li>
+                                <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <!-- navigation bar -->
+                    <div class="col l-0 m-2 sm-2 navbar-btn">
+                        <button onclick="nav_open()" type="button"><i class="ti-menu-alt"></i></button>
+                    </div>
+                    <!-- login -->
+                    <div class="col l-0 m-7 sm-6"></div>
+                    <div class="col l-1 m-2 sm-3 login-btn">
+                        <button onclick="login_open()">
+                            <i class="ti-user"></i>
+                            <span>login</span>
+                        </button>
+                    </div>
+                    <!-- search -->
+                    <div class="col l-1 m-1 sm-1 search-box">
+                        <a href="./search.html" class="button"><i class="ti-search"></i></a>
+                    </div>
+                    <!-- navigation on mobile & tablet -->
+                    <div class="nav-overlay" onclick="nav_exit()"></div>
+                    <div class="nav-mobile-tablet js-nav-mobile-tablet">
+                        <div class="social-list">
+                            <a href="https://www.facebook.com/">
+                                <i class="ti-facebook icons"></i>
+                            </a>
+                            <a href="http://google.com/">
+                                <i class="ti-google icons"></i>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <i class="ti-instagram icons"></i>
+                            </a>
+                            <a href="https://github.com/">
+                                <i class="ti-github icons"></i>
+                            </a>
+                        </div>
+                        <button type="button" onclick="nav_exit()" class="nav-mobile-tablet-close"><i class="ti-close"></i></button>
+                        <ul class="nav-list-mobile-tablet">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="">Discover</a></li>
+                            <li>
+                                <a href="#" onclick="category_open()">Category</a>
+                                <ul class="sub-nav-mobile-tablet">
+                                    <li><a href="./Action-category.html">Action</a></li>
+                                    <li><a href="./Adventure-category.html">Adventure</a></li>
+                                    <li><a href="./Comedy-category.html">Comedy</a></li>
+                                    <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                    <li><a href="./Drama-category.html">Drama</a></li>
+                                    <li><a href="./Historical-category.html">Historical</a></li>
+                                    <li><a href="./Horror-category.html">Horror</a></li>
+                                    <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
+                </div>
+            </div>
+        </div>
+        <!-- End: header -->
+        <div class="sub-web"></div>
+        <!-- Begin: content -->
+        <div id="content">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-8 m-12 sm-12 sub-main-content">
+                        <div class="sub-main-post">
+                            <div class="sub-post-header">
+                                <div class="sub-post-label">
+                                    <a href="./Adventure-category.html">Adventure/Drama ‧</a>
+                                </div>
+                                <div class="sub-post-title">
+                                    <h2>'Life of Pi': Hành trình chông gai và những bài học vàng</h2>
+                                </div>
+                                <div class="sub-meta-date">
+                                    by <a href="" title="author">Cong Dang</a>
+                                    - Nov 29 2021
+                                </div>
+                            </div>
+                            <div class="sub-post-entry">
+                                <img src="./assets/img/Pi6.jpg" alt="Pi">
+                                <br>
+                                Bộ phim được đạo diễn bởi Lý An, người đã từng nổi danh với những tác 
+                                phẩm như Chuyện tình sau núi (2005), Sắc giới (2007). Có thể nói, 
+                                Life Of Pi trên màn ảnh là một câu chuyện hết sức kỳ thú, được lột tả 
+                                bằng ngôn ngữ điện ảnh đẹp tuyệt vời của Lý An, nội dung phim cũng 
+                                rất nhân văn và đáng ngưỡng mộ.
+                                <br>
+                                Trong một lá thư gửi cho tác giả, Barack Obama đã từng nói Life of 
+                                Pi là bằng chứng rõ ràng của Thiên Chúa và sức mạnh của việc kể chuyện 
+                                thông qua hình ảnh.
+                                <br>   
+                                <img src="./assets/img/Pi1.jpg" alt="Pi">
+                                <br>
+                                Trong bộ phim, tất cả câu chuyện được kể lại đều chỉ là câu chuyện 
+                                trong trí tưởng tượng, một trí tưởng tượng đầy nhân văn của Pi và 
+                                chính là cách tiếp cận cũng như cảm nhận được về Thiên Chúa.
+                                <br>
+                                Life of Pi, người ta không phải cất công để trăn trở với những chi 
+                                tiết khó hiểu. Tất cả đều xảy ra rất rõ ràng, mạch lạc.
+                                <br>
+                                <img src="./assets/img/Pi2.jpg" alt="Pi">
+                                <br>
+                                Câu chuyện được dẫn dắt cũng như kể theo trình tự thời gian và có 
+                                những khoảng nghỉ hợp lý, khiến cho người xem không hề cảm thấy bị 
+                                ngợp cũng gặp khó khăn trong việc theo dõi.
+                                <br>
+                                tác giả không nằm ở những chi tiết như vậy, mà toàn bộ cả câu chuyện 
+                                đều mang đầy những ẩn ý nhân văn về triết lý nhân sinh. Có hàng 
+                                chục, hàng trăm, hàng ngàn người đã cố gắng mổ xẻ để phân tích nhưng 
+                                có thể nói rằng Yann Martel thật sự quá giỏi khi có thể lồng ghép 
+                                được những điều như vậy vào trong một cuốn tiểu thuyết.
+                                <br>
+                                Một bộ phim về đức tin, về những câu hỏi muôn thuở về tôn giáo. Và 
+                                câu trả lời được đạo diễn Lý An đưa vào trong phim, thể hiện bằng 
+                                ngôn ngữ của điện ảnh.
+                                <br>
+                                <img src="./assets/img/Pi3.jpg" alt="Pi">
+                                <br>
+                                “Có, thượng đế ở trên kia và đang quan sát chúng ta, nếu chúng ta 
+                                lạc lối, thì người sẽ dẫn dắt chúng ta, thứ chúng ta cần là lòng tin.”
+                                <br>
+                                Bản thân là một người vô thần nên hầu hết các bộ phim mang chủ đề 
+                                tôn giáo đã từng được xếp vào danh sách đen của tôi nhưng khi xem 
+                                Life Of Pi, cách tiếp cận về niềm tin, tín ngưỡng của con người được 
+                                xây dựng một cách gần gũi, gần gũi đến trần trụi.
+                                <br>
+                                <img src="./assets/img/Pi4.jpg" alt="Pi">
+                                <br>
+                                Bộ phim này khiến cho bất kì ai, thuộc bất kì tôn giáo nào đều có 
+                                thể tiếp nhận một cách dễ dàng.
+                                <br>
+                                Từ đó chúng ta hiểu được triết lý mà tác giả muốn gửi gắm, chỉ có 
+                                một Thiên Chúa, chính là Chúa trong lòng bạn, là đức tin của riêng bạn.
+                                <br>
+                                Một bộ phim có nội dung không thú vị nhưng lại mang đầy triết lý về 
+                                nhân sinh quan cũng như đức tin, tôn giáo. Đây cũng là một trong 
+                                những bộ phim hiếm hoi có khả năng tiếp cận tới bất cứ người thuộc 
+                                bất cứ tôn giáo nào.
+                                <br>
+                                <img src="./assets/img/Pi5.jpg" alt="Pi">
+                                <br>
+                                Suraj Sharma chàng diễn viên nghiệp dư chưa từng đóng phim
+                                <br>
+                                Diễn viên chính của bộ phim lại là một chàng trai 17 tuổi chưa từng 
+                                biết diễn xuất, được tuyển chọn từ hơn 3000 người trong buổi tuyển 
+                                chọn.
+                                <br>
+                                tác phẩm điện ảnh sử dụng nhiều tới công nghệ mô phỏng hình ảnh bằng 
+                                máy tính thì có lẽ hầu hết các cảnh quay, Suraj Sharma đều phải làm 
+                                việc với một phông nền xanh, tuy vậy diễn xuất của anh thể hiện lại 
+                                vô cùng tốt.
+                                <br>
+                                Có thể nói, việc diễn một vai diễn với nội tâm sâu sắc và những biểu 
+                                cảm phức tạp chưa bao giờ là việc dễ dàng kể cả đối với các diễn viên 
+                                hạng A của Hollywood.
+                            </div>
+                            <div class="grid sub-post-meta">
+                                <div class="row">
+                                    <div class="col l-6 m-6 sm-6 entry-tags">
+                                        <p>
+                                            <i class="ti-tag"></i>
+                                            Tags: Adventure, Drama
+                                        </p>
+                                    </div>
+                                    <div class="col l-6 m-6 sm-6 sub-post-share">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook icons"></i>
+                                        </a>
+                                        <a href="http://google.com/">
+                                            <i class="ti-google icons"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram icons"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-blog-paper">
+                            <div class="row">
+                                <div class="col l-10 m-4 sm-0"></div>
+                                <div class="col l-2 m-8 sm-12">
+                                    <a href="./Sherlock.html">Next Post <i class="ti-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-post-list">
+                            <h3>you may also like</h3>
+                            <div class="row">
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Sherlock-img.jpg" alt="Sherlock">
+                                    <a href="./Sherlock.html">Review series phim Sherlock: vẻ gợi cảm của bộ não thiên tài</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/The-greatest-showman-img.jpg" alt="The Greatest Showman">
+                                    <a href="./the-greatest-showman.html">'The Greatest Showman': vẻ đẹp của sự khác biệt</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Spider-man-no-way-home-img.jpg" alt="Spider Man">
+                                    <a href="./spider-man-no-way-home.html">'Spider-Man: No Way Home'</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-post-comments">
+                            <h3 class="comments-title">0 comments</h3>
+                            <div class="comments-holder">
+                                <ol class="comments-list">
+                                    <!-- comment 1 -->
+                                    <!-- <li class="grid comment">
+                                        <div class="row">
+                                            <div class="col l-1 avatar-img">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="col l-11 comment-block">
+                                                <div class="comment-header">
+                                                    <div class="user"></div>
+                                                    <div class="date-time"></div>
+                                                </div>
+                                                <p class="comment-content"></p>
+                                            </div>
+                                        </div>
+                                    </li> -->
+                                    <!-- end comment -->
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-1 m-0 sm-0"></div>
+                    <div class="col l-3 m-12 sm-12 sidebar-content">
+                        <div class="row">
+                            <div class="col l-12 sm-12 widget trailer">
+                                <h4 class="widget-title"><span>trailer</span></h4>
+                                <div class="video-trailer">
+                                    <video width="100%" height="100%" controls autoplay muted loop>
+                                        <source src="./assets/video/Life-Of-Pi.mp4" type="video/mp4">
+                                        Your browser does not support HTML video.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget follow-us">
+                                <h4 class="widget-title"><span>follow us</span></h4>
+                                <div class="widget-content">
+                                    <div class="widget-list">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                        <a href="https://twitter.com/">
+                                            <i class="ti-twitter"></i>
+                                        </a>
+                                        <a href="https://www.google.com/">
+                                            <i class="ti-google"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/">
+                                            <i class="ti-youtube"></i>
+                                        </a>
+                                        <a href="https://github.com/">
+                                            <i class="ti-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget labels">
+                                <h4 class="widget-title"><span>labels</span></h4>
+                                <div class="widget-content">
+                                    <span class="label"><a href="./Action-category.html">Action</a></span>
+                                    <span class="label"><a href="./Adventure-category.html">Adventure </a></span>
+                                    <span class="label"><a href="./Gangter-category.html">Crime & Gangster</a></span>
+                                    <span class="label"><a href="./Comedy-category.html">Comedy</a></span>
+                                    <span class="label"><a href="./Horror-category.html">Horror</a></span>
+                                    <span class="label"><a href="./Drama-category.html">Drama</a></span>
+                                    <span class="label"><a href="./Historical-category.html">Historical</a></span>
+                                    <span class="label"><a href="./Musical-Dance-category.html">Musical & Dance</a></span>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget recent-posts">
+                                <h4 class="widget-title"><span>recent posts</span></h4>
+                                <div class="row widget-content side-list">
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Arcane-img.jpg" alt="Arcane Jinx">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Arcane.html">Review Series Arcane: Nợ Cũ Phải Trả của Netflix</a></h4>
+                                                <p>29 Nov 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Eternals-img.png" alt="Eternals">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Eternals.html">Review: ETERNALS</a></h4>
+                                                <p>November 5 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/The-medium-img.jpg" alt="The medium">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Medium.html">Review The Medium</a></h4>
+                                                <p>July 10 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: content -->
+        <div class="line"></div>
+        <!-- Begin: footer -->
+        <div id="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-12 sm-12 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <div class="col l-8 m-12 sm-12 footer-logo">
+                        <a href="./index.html"><img src="assets/img/logo.jpg" alt="logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: footer -->
+    </div>
+    <!-- login / register -->
+    <div id="login-register" onclick="login_open()">
+        <div class="login-container fadeInDown" id="login">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
+            <div class="login-footer fadeIn fourth">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="login-container fadeInDown" id="register">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
+        </div>
+    </div>
+    <div class="to-top">
+        <a href="#main"><i class="ti-angle-up"></i></a>
+    </div>
+     <!-- js -->
+    <script src="./assets/javascript/script.js"></script>
+</body>
+</html>

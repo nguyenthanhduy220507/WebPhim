@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">    
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- main -->
+    <div id="main">
+        <!-- Begin: header -->
+        <div id="header">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-0 sm-0 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <ul class="col l-8 m-0 sm-0 nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="">Discover</a></li>
+                        <li>
+                            <a href="#">Category</a>
+                            <ul class="sub-nav">
+                                <li><a href="./Action-category.html">Action</a></li>
+                                <li><a href="./Adventure-category.html">Adventure</a></li>
+                                <li><a href="./Comedy-category.html">Comedy</a></li>
+                                <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                <li><a href="./Drama-category.html">Drama</a></li>
+                                <li><a href="./Historical-category.html">Historical</a></li>
+                                <li><a href="./Horror-category.html">Horror</a></li>
+                                <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <!-- navigation bar -->
+                    <div class="col l-0 m-2 sm-2 navbar-btn">
+                        <button onclick="nav_open()" type="button"><i class="ti-menu-alt"></i></button>
+                    </div>
+                    <!-- login -->
+                    <div class="col l-0 m-7 sm-6"></div>
+                    <div class="col l-1 m-2 sm-3 login-btn">
+                        <button onclick="login_open()">
+                            <i class="ti-user"></i>
+                            <span>login</span>
+                        </button>
+                    </div>
+                    <!-- search -->
+                    <div class="col l-1 m-1 sm-1 search-box">
+                        <a href="./search.html" class="button"><i class="ti-search"></i></a>
+                    </div>
+                    <!-- navigation on mobile & tablet -->
+                    <div class="nav-overlay" onclick="nav_exit()"></div>
+                    <div class="nav-mobile-tablet js-nav-mobile-tablet">
+                        <div class="social-list">
+                            <a href="https://www.facebook.com/">
+                                <i class="ti-facebook icons"></i>
+                            </a>
+                            <a href="http://google.com/">
+                                <i class="ti-google icons"></i>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <i class="ti-instagram icons"></i>
+                            </a>
+                            <a href="https://github.com/">
+                                <i class="ti-github icons"></i>
+                            </a>
+                        </div>
+                        <button type="button" onclick="nav_exit()" class="nav-mobile-tablet-close"><i class="ti-close"></i></button>
+                        <ul class="nav-list-mobile-tablet">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="">Discover</a></li>
+                            <li>
+                                <a href="#" onclick="category_open()">Category</a>
+                                <ul class="sub-nav-mobile-tablet">
+                                    <li><a href="./Action-category.html">Action</a></li>
+                                    <li><a href="./Adventure-category.html">Adventure</a></li>
+                                    <li><a href="./Comedy-category.html">Comedy</a></li>
+                                    <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                    <li><a href="./Drama-category.html">Drama</a></li>
+                                    <li><a href="./Historical-category.html">Historical</a></li>
+                                    <li><a href="./Horror-category.html">Horror</a></li>
+                                    <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
+                </div>
+            </div>
+        </div>
+        <!-- End: header -->
+        <div class="sub-web"></div>
+        <!-- Begin: content -->
+        <div id="content">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-8 m-12 sm-12 sub-main-content">
+                        <div class="sub-main-post">
+                            <div class="sub-post-header">
+                                <div class="sub-post-label">
+                                    <a href="./Comedy.html">Comedy/Adventure</a>
+                                </div>
+                                <div class="sub-post-title">
+                                    <h2>'Free Guy' - khi người đàn ông mờ nhạt trở thành anh hùng</h2>
+                                </div>
+                                <div class="sub-meta-date">
+                                    by <a href="https://www.facebook.com/cong.dang.January31/" title="author">Cong Dang</a>
+                                    - March 04 2021
+                                </div>
+                            </div>
+                            <div class="sub-post-entry">
+                                <p class="bold-text">Trong tác phẩm hài hành động giả tưởng mô phỏng 
+                                    thế giới game, Ryan Reynolds vào vai một nhân vật phụ vô danh bỗng 
+                                    chốc hóa anh hùng.</p>
+                                <br>
+                                Thể loại hành động hài hước những năm gần đây đánh dấu gương mặt quen 
+                                thuộc Ryan Reynolds. Có gương mặt điển trai, vóc dáng cân đối cùng 
+                                khiếu hài hước “mặn mà”, ngôi sao của Deadpool đem đến cho các bộ 
+                                phim không khí tưng tửng rất đặc trưng. Free Guy là một tác phẩm 
+                                không phải ngoại lệ.
+                                <br>
+                                <img src="./assets/img/Free-guy1.jpg" alt="Free Guy">
+                                <p class="text-center">Trong phim, Reynolds vào vai một nhân viên 
+                                    ngân hàng mờ nhạt không thể mờ nhạt hơn.</p>
+                                <br>
+                                Anh chàng Guy tươi tỉnh thức giấc mỗi ngày, chào chú cá vàng, mua 
+                                cà phê và tới ngân hàng làm việc. Mỗi ngày sẽ có ai đó tới cướp, 
+                                việc của Guy và ông bạn thân Buddy (Lil Rel Howery) là vui vẻ nằm 
+                                rạp xuống đất chờ cho cơn hoạn nạn qua đi.
+                                <br>
+                                Guy ngưỡng mộ những người đeo kính râm trong thành phố của mình mà 
+                                không biết rằng anh đang sống trong một trò chơi trực tuyến kiểu 
+                                Grand Theft Auto. Những người đeo kính thực chất là những người 
+                                chơi game, YouTube và Twitch streamer trên toàn cầu. Còn bản thân 
+                                anh? Anh chỉ là một nhân vật phụ - một nhân viên ngân hàng được lập 
+                                trình sẵn (NPC/ Non-Player Character).
+                                <br>
+                                <img src="./assets/img/Free-guy2.jpg" alt="Free Guy">
+                                <p class="text-center">Câu cửa miệng của Guy là: “Đừng có có một 
+                                    ngày tốt lành. Hãy có một ngày tuyệt vời”.</p>
+                                <br>
+                                Nhịp sống quen thuộc của Guy thay đổi khi có sự xuất hiện của Molotov 
+                                Girl (Jodie Comer). Anh chàng nhận ra mình có thể trở thành mọi thứ, 
+                                làm những điều mình muốn bất chấp vai trò nhỏ bé định sẵn.
+                                <br>
+                                Ở ngoài đời, Molotov Girl tên thật là Millie vốn là một nữ lập trình 
+                                viên đang trong cuộc chiến với tập đoàn game giàu có dẫn dắt bởi 
+                                Antwan (Taika Waititi). Millie cần tìm bằng chứng trong trò chơi 
+                                Free Guy để đánh bại Antwan, đòi lại công lý.
+                                <br><br>
+                                <h3><p class="bold-text text-center">Vai chính lặp lại của Ryan 
+                                    Reynolds</p></h3><br>
+                                Mỉa mai là trong một bộ phim khuyến khích người ta bước ra khỏi vùng 
+                                an toàn, Free Guy lại là sự trở lại của Ryan Reynolds trong hình 
+                                tượng nam chính ngờ nghệch, hài hước, tốt bụng của phim hành động.
+                                <br>
+                                Tuy vậy, nam diễn viên người Canada đã tiết chế sự bậy bạ và “cà khịa” 
+                                của Deadpool để có một vai trai ngoan đúng nghĩa. Vì Guy là một nhân 
+                                vật game nên sự kỳ quặc của Reynolds đã phát huy tác dụng: anh cười 
+                                toe toét khi bị ăn đấm, xe tông, đùa cợt với những kẻ có súng, thản 
+                                nhiên uống cà phê trong khi xe tăng diễu hành ngoài phố…
+                                <br>
+                                Trong khoảng 5 năm trở lại đây, thể loại hài hành động là mỏ vàng 
+                                của Ryan Reynolds. Anh kiếm được hàng chục triệu USD nhờ Netflix với 
+                                6 Underground và sắp tới là Red Notice. Các phim như The Hitman’s 
+                                Bodyguard, Hobbs & Shaw hay Detective Pikachu đều cùng một phong 
+                                cách cợt nhả thường thấy.
+                                <br>
+                                Với Free Guy, Ryan Reynolds thực chất không có gì đột phá về mặt 
+                                diễn xuất. Tuy nhiên anh lại biết tiết chế và hòa hợp với câu chuyện.
+                                <br>
+                                <img src="./assets/img/Free-guy3.jpg" alt="Free Guy">
+                                <br>
+                                <p class="text-center">Cứu lại là nhờ một kịch bản khéo léo và sự hỗ 
+                                    trợ của bạn diễn có tâm, có tầm như Jodie Comer hay màn tung 
+                                    hứng của Taika Waititi.”.</p>
+                                <br>
+                                Về mặt nào đó, Reynolds là ngôi sao hoàn hảo cho một bộ phim như 
+                                thế này: thương hiệu châm biếm quen thuộc của anh dễ dàng đồng bộ 
+                                với ý tưởng nhẹ nhàng của bộ phim.
+                                <br><br>
+                                <h3><p class="bold-text text-center">Hình ảnh vui mắt</p></h3><br>
+                                Free Guy làm hài lòng những khán giả không chơi game bằng việc đem 
+                                đến thế giới đầy màu sắc pha trộn hơi hướm của các tựa game ăn khách 
+                                từ Fortnite, Grand Theft Auto, Red Dead Redemption, đến Half-Life, 
+                                Mega Man hay Halo.
+                                <br>
+                                Việc sử dụng ôtô, máy bay thật trong phim khiến phần hình ảnh của 
+                                phim vừa chân thực lại kỳ ảo. Các cảnh cháy nổ được thực hiện khéo 
+                                léo, trong khi lột tả được sự hỗn loạn của một trò chơi hành động 
+                                nhưng vẫn có trình tự và bố cục để các nhân vật có không gian thể hiện.
+                                <br>
+                                <img src="./assets/img/Free-guy4.jpg" alt="Free Guy">
+                                Chưa kể tạo hình đẹp mắt, quái chiêu chẳng hạn như cảnh sát múa cột 
+                                hay bộ đồ Thỏ Hồng sáu múi, thể hiện các cá tính game phong phú mà 
+                                ngoài đời không có dịp bộc lộ.
+                                <br>
+                                Khán giả hẳn sẽ bắt gặp những chi tiết nho nhỏ thú vị rải rác khắp bộ 
+                                phim: màn pha trò của nhân vật do Channing Tatum thủ vai hay cú 
+                                cameo gây sốc đến từ “Captain America” Chris Evans. Sự xuất hiện 
+                                của một Guy siêu cơ bắp tên Dude cũng là một trò hề rất có thể đến 
+                                từ ý tưởng của Ryan Reynolds.
+                                <br>
+                                Điều khiến tác phẩm chưa thể đạt tới tầm của Ready Player One (và 
+                                có thể cũng không có ý định làm vậy) là sự thiếu hiểu biết và đam 
+                                mê thực sự của ê-kíp với game. Nếu như Ready Player One khiến người 
+                                xem ngay cả những người chơi chuyên nghiệp bất ngờ về kiến thức 
+                                game cũng như dấu ấn mạnh mẽ của pop culture, thì phim của 20th 
+                                Century Studios chỉ đơn giản coi game như một công cụ kể chuyện.
+                                <br>
+                                <img src="./assets/img/Free-guy5.jpg" alt="Free Guy">
+                                <p class="text-ilatic"> Không phải ai là gamer cũng sẽ thích một 
+                                    bộ phim kiểu “Reynolds Player One”.</p>
+                                Tác phẩm đến từ đạo diễn của loạt Night at the Museum và Stranger 
+                                Things lần này xứng đáng là một bom tấn phòng vé nhờ tính giải trí 
+                                thuần túy mà khán giả mong chờ sau một thời kỳ dịch bệnh khiến 
+                                rạp chiếu đóng cửa.
+                                <br>
+                                Nhất là trong giai đoạn phức tạp, nhiều biến cố như hiện nay, ai 
+                                mà chẳng thích trốn thoát khỏi thực tại để phiêu lưu trong hai 
+                                tiếng đồng hồ tràn ngập tiếng cười, rực rỡ và ngớ ngẩn về một anh 
+                                chàng tự quyết định vận mệnh của chính mình.
+                            </div>
+                            <div class="grid sub-post-meta">
+                                <div class="row">
+                                    <div class="col l-6 m-6 sm-6 entry-tags">
+                                        <p>
+                                            <i class="ti-tag"></i>
+                                            Tags: action, Comedy
+                                        </p>
+                                    </div>
+                                    <div class="col l-6 m-6 sm-6 sub-post-share">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook icons"></i>
+                                        </a>
+                                        <a href="http://google.com/">
+                                            <i class="ti-google icons"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram icons"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-blog-paper">
+                            <div class="row">
+                                <div class="col l-10 m-4 sm-0"></div>
+                                <div class="col l-2 m-8 sm-12">
+                                    <a href="./1917.html">Next Post <i class="ti-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-post-list">
+                            <h3>you may also like</h3>
+                            <div class="row">
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/1917-img.jpg" alt="1917">
+                                    <a href="./1917.html">'1917': Bộ mặt tàn khốc của chiến tranh</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Arcane-img.jpg" alt="Arcane">
+                                    <a href="./Arcane.html">Review Series 'Arcane': Nợ Cũ Phải Trả của Netflix</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Eternals-img.png" alt="Eternals">
+                                    <a href="./Eternals.html">'Eternals': Chủng Tộc Bất Tử</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-post-comments">
+                            <h3 class="comments-title">0 comments</h3>
+                            <div class="comments-holder">
+                                <ol class="comments-list">
+                                    <!-- comment 1 -->
+                                    <!-- <li class="grid comment">
+                                        <div class="row">
+                                            <div class="col l-1 avatar-img">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="col l-11 comment-block">
+                                                <div class="comment-header">
+                                                    <div class="user"></div>
+                                                    <div class="date-time"></div>
+                                                </div>
+                                                <p class="comment-content"></p>
+                                            </div>
+                                        </div>
+                                    </li> -->
+                                    <!-- end comment -->
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-1 m-0 sm-0"></div>
+                    <div class="col l-3 m-12 sm-12 sidebar-content">
+                        <div class="row">
+                            <div class="col l-12 sm-12 widget trailer">
+                                <h4 class="widget-title"><span>trailer</span></h4>
+                                <div class="video-trailer">
+                                    <video width="100%" height="100%" controls autoplay muted loop>
+                                        <source src="./assets/video/Free-Guy.mp4" type="video/mp4">
+                                        Your browser does not support HTML video.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget follow-us">
+                                <h4 class="widget-title"><span>follow us</span></h4>
+                                <div class="widget-content">
+                                    <div class="widget-list">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                        <a href="https://twitter.com/">
+                                            <i class="ti-twitter"></i>
+                                        </a>
+                                        <a href="https://www.google.com/">
+                                            <i class="ti-google"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/">
+                                            <i class="ti-youtube"></i>
+                                        </a>
+                                        <a href="https://github.com/">
+                                            <i class="ti-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget labels">
+                                <h4 class="widget-title"><span>labels</span></h4>
+                                <div class="widget-content">
+                                   <span class="label"><a href="./Action-category.html">Action</a></span>
+                                    <span class="label"><a href="./Adventure-category.html">Adventure </a></span>
+                                    <span class="label"><a href="./Gangter-category.html">Crime & Gangster</a></span>
+                                    <span class="label"><a href="./Comedy-category.html">Comedy</a></span>
+                                    <span class="label"><a href="./Horror-category.html">Horror</a></span>
+                                    <span class="label"><a href="./Drama-category.html">Drama</a></span>
+                                    <span class="label"><a href="./Historical-category.html">Historical</a></span>
+                                    <span class="label"><a href="./Musical-Dance-category.html">Musical & Dance</a></span>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget recent-posts">
+                                <h4 class="widget-title"><span>recent posts</span></h4>
+                                <div class="row widget-content side-list">
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Arcane-img.jpg" alt="Arcane Jinx">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Arcane.html">Phân tích tập 9 Arcane</a></h4>
+                                                <p>29 Nov 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Eternals-img.png" alt="Eternals">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Eternals.html">Review: ETERNALS</a></h4>
+                                                <p>November 5 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/The-medium-img.jpg" alt="The medium">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Medium.html">Review The Medium</a></h4>
+                                                <p>July 10 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: content -->
+        <div class="line"></div>
+        <!-- Begin: footer -->
+        <div id="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-12 sm-12 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <div class="col l-8 m-12 sm-12 footer-logo">
+                        <a href="./index.html"><img src="assets/img/logo.jpg" alt="logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: footer -->
+    </div>
+    <!-- login / register -->
+    <div id="login-register" onclick="login_open()">
+        <div class="login-container fadeInDown" id="login">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
+            <div class="login-footer fadeIn fourth">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="login-container fadeInDown" id="register">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
+        </div>
+    </div>
+    <div class="to-top">
+        <a href="#main"><i class="ti-angle-up"></i></a>
+    </div>
+     <!-- js -->
+    <script src="./assets/javascript/script.js"></script>
+</body>
+</html>

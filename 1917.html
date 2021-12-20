@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">    
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- main -->
+    <div id="main">
+        <!-- Begin: header -->
+        <div id="header">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-0 sm-0 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <ul class="col l-8 m-0 sm-0 nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="">Discover</a></li>
+                        <li>
+                            <a href="#">Category</a>
+                            <ul class="sub-nav">
+                                <li><a href="./Action-category.html">Action</a></li>
+                                <li><a href="./Adventure-category.html">Adventure</a></li>
+                                <li><a href="./Comedy-category.html">Comedy</a></li>
+                                <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                <li><a href="./Drama-category.html">Drama</a></li>
+                                <li><a href="./Historical-category.html">Historical</a></li>
+                                <li><a href="./Horror-category.html">Horror</a></li>
+                                <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <!-- navigation bar -->
+                    <div class="col l-0 m-2 sm-2 navbar-btn">
+                        <button onclick="nav_open()" type="button"><i class="ti-menu-alt"></i></button>
+                    </div>
+                    <!-- login -->
+                    <div class="col l-0 m-7 sm-6"></div>
+                    <div class="col l-1 m-2 sm-3 login-btn">
+                        <button onclick="login_open()">
+                            <i class="ti-user"></i>
+                            <span>login</span>
+                        </button>
+                    </div>
+                    <!-- search -->
+                    <div class="col l-1 m-1 sm-1 search-box">
+                        <a href="./search.html" class="button"><i class="ti-search"></i></a>
+                    </div>
+                    <!-- navigation on mobile & tablet -->
+                    <div class="nav-overlay" onclick="nav_exit()"></div>
+                    <div class="nav-mobile-tablet js-nav-mobile-tablet">
+                        <div class="social-list">
+                            <a href="https://www.facebook.com/">
+                                <i class="ti-facebook icons"></i>
+                            </a>
+                            <a href="http://google.com/">
+                                <i class="ti-google icons"></i>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <i class="ti-instagram icons"></i>
+                            </a>
+                            <a href="https://github.com/">
+                                <i class="ti-github icons"></i>
+                            </a>
+                        </div>
+                        <button type="button" onclick="nav_exit()" class="nav-mobile-tablet-close"><i class="ti-close"></i></button>
+                        <ul class="nav-list-mobile-tablet">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="">Discover</a></li>
+                            <li>
+                                <a href="#" onclick="category_open()">Category</a>
+                                <ul class="sub-nav-mobile-tablet">
+                                    <li><a href="./Action-category.html">Action</a></li>
+                                    <li><a href="./Adventure-category.html">Adventure</a></li>
+                                    <li><a href="./Comedy-category.html">Comedy</a></li>
+                                    <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                    <li><a href="./Drama-category.html">Drama</a></li>
+                                    <li><a href="./Historical-category.html">Historical</a></li>
+                                    <li><a href="./Horror-category.html">Horror</a></li>
+                                    <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
+                </div>
+            </div>
+        </div>
+        <!-- End: header -->
+        <div class="sub-web"></div>
+        <!-- Begin: content -->
+        <div id="content">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-8 m-12 sm-12 sub-main-content">
+                        <div class="sub-main-post">
+                            <div class="sub-post-header">
+                                <div class="sub-post-label">
+                                    <a href="./Historical-category.html">Historical/Drama</a>
+                                </div>
+                                <div class="sub-post-title">
+                                    <h2>'1917': Bộ mặt tàn khốc của chiến tranh</h2>
+                                </div>
+                                <div class="sub-meta-date">
+                                    by <a href="https://www.facebook.com/cong.dang.January31/" title="author">Cong Dang</a>
+                                    - Dec 04 2021
+                                </div>
+                            </div>
+                            <div class="sub-post-entry">
+                                Khi Schofield chạy băng qua trận pháo kẻ địch trong phim "1917", mạng 
+                                hàng nghìn binh sĩ được đặt vào sự sống còn của anh.
+                                <br>
+                                Tháng 4/1917, quân Anh-Pháp và Đức vẫn giằng co ở mặt trận phía Tây 
+                                trong Thế chiến thứ nhất. Khi một đội quân Đức rút lui, đại tá Mackenzie (Benedict Cumberbatch) dự định tấn công để thúc đẩy tốc độ cuộc chiến. Nhưng nhiều dữ kiện cho thấy kẻ địch đã ngầm bài trí phục binh.
+                                <br>
+                                Hai người lính - Will Schofield (George MacKay đóng) và Tom Blake 
+                                (Dean-Charles Chapman) - được lệnh mang thư của cấp trên đến ngăn 
+                                Mackenzie. Với Blake, nhiệm vụ còn mang ý nghĩa cá nhân khi anh trai 
+                                anh là một trong 1.600 binh sĩ sắp đi vào chỗ chết. Hành trình của 
+                                Schofield và Blake nhanh chóng trở thành nỗi kinh hoàng bởi địa hình 
+                                khó khăn và sức ép từ phe địch.
+                                <br>
+                                <img src="./assets/img/1917-1.png" alt="1917"> 
+                                <br>
+                                Kỹ thuật dàn dựng là điểm nhấn lớn nhất của 1917, được giới phê bình 
+                                tán dương. Tác phẩm gồm nhiều cảnh được ráp nối khéo léo, khiến toàn 
+                                phim trông như chỉ có một cú máy không ngắt quãng (one shot). Để thực 
+                                hiện điều này, đạo diễn Sam Mendes, nhà quay phim Roger Deakins cùng 
+                                ê-kíp kỳ công dàn dựng. Trước ghi hình, họ dựng toàn bộ cảnh phim với 
+                                mô hình thu nhỏ, sau đó tạo bối cảnh thật. Ở hiện trường tại Wiltshire 
+                                (Anh), họ đào hệ thống chiến hào dài 1,5km để ghi hình. Từng bối cảnh 
+                                đều được tính toán kỹ về cự ly, không gian để các nhà làm phim có 
+                                khoảng trống di chuyển, bắt theo chuyển động nhân vật.
+                                <br>
+                                Phong cách one shot không phải chỉ để đẹp mắt mà gắn chặt với ý nghĩa 
+                                tác phẩm. Ở Thế chiến thứ nhất, đặc trưng của mặt trận trên bộ là việc 
+                                dùng nhiều chiến hào. Chúng khó tấn công và dễ phòng thủ, do đó hai 
+                                phe kiềm chân nhau thời gian dài, tạo nên sự mệt mỏi, thương vong lớn 
+                                nhưng ít thành quả. Vùng đất tranh chấp thành khu vực cực kỳ nguy hiểm, 
+                                nơi mối họa có thể đến từ bất kỳ hướng nào.
+                                <br>
+                                <img src="./assets/img/1917-Slide.jpg" alt="1917"> 
+                                <br>
+                                1917 tóm gọn tinh thần này bằng cách gắn chặt người xem vào hai nhân vật 
+                                chính. Khán giả chỉ được thấy những gì nhà quay phim sắp xếp để lọt vào 
+                                khung hình. Không có những cú cắt cảnh sang ban chỉ huy của hai phe, không 
+                                có những hình ảnh về quân đội diễn ra ngoài không gian của hai nhân vật 
+                                chính. Khán giả hầu như chỉ biết các sự kiện cùng lúc, ở mức độ như 
+                                Schofield và Blake, do đó kịch tính được đẩy cao. Những tình thế, nơi chốn 
+                                yên bình có thể ẩn chứa vô vàn hiểm họa.
+                                <br>
+                                Tác phẩm gạt bỏ chủ nghĩa anh hùng trong phim Hollywood mà tập trung vào 
+                                sự khốc liệt đến trần trụi của chiến tranh. Không có những bài phát biểu 
+                                hào hùng hay vinh quang chiến thắng, bộ mặt thật của cuộc chiến là những 
+                                binh sĩ mệt mỏi đến quên ngày tháng ở chiến hào, nhiều người dũng cảm 
+                                nhưng tinh thần cũng bắt đầu lung lay. Cách một nhân vật thản nhiên nói 
+                                về đồng đội được chôn ngay trong chiến hào càng tô đậm sự tàn khốc của 
+                                chiến tranh, khiến con người dường như chai lì với cái chết.
+                                <br>
+                                Ý tưởng chính của phim là những người bình thường bị đặt vào hoàn cảnh 
+                                khắc nghiệt. Mendes làm rõ điều này với góc quay từ sau lưng khi 
+                                Schofield và Blake dần ló đầu lên khỏi hàng rào (tức bước vào khu vực 
+                                nguy hiểm). Khán giả chỉ thấy giống nhân vật và cảm nhận được nỗi bất 
+                                an của họ, có thể mất mạng bất kỳ lúc nào.
+                                <br>
+                                Trừ một cảnh, 1917 hầu như diễn ra với thời gian thực (real time), 
+                                qua đó cái chết được khắc họa trực diện. Trong một cảnh, thời gian từ 
+                                lúc một nhân vật bị thương đến chết chỉ vài phút, không có những chi 
+                                tiết cường điệu hay bi lụy hóa. Ở chiến trường, nơi mọi sai lầm phải 
+                                trả giá, một cá thể khỏe mạnh, đầy quyết tâm có thể dễ dàng bị tước 
+                                đoạt sự sống. Cái xác dần tái đi và vết máu loang ra chỉ trong thời 
+                                gian ngắn phản ánh sự mong manh của đời người. Một cảnh ấn tượng khác 
+                                là cao trào, khi Schofield chạy băng qua hàng trăm lính đang xung 
+                                phong (tức rơi vào trận địa kẻ thù). Với góc quay của phim, người 
+                                xem không thể thấy rõ khuôn mặt từng binh sĩ nhưng qua hình ảnh, âm 
+                                thanh của pháo binh có thể hình dung sức ép với họ. Mỗi người chạy 
+                                băng qua Schofield có thể xem là một "thất bại" của anh, khi chưa thể 
+                                đến gặp chỉ huy kịp lúc. Đó dường như là bộ mặt chiến tranh mà Mendes 
+                                muốn phơi bày, nhóm người "vô danh" lao vào hung hiểm, trong khi mạng 
+                                sống của họ phụ thuộc vài quyết định sau hậu trường.
+                                <br>
+                                Cả George MacKay và Dean-Charles Chapman đều hoàn thành nhiệm vụ trong 
+                                tác phẩm đòi hỏi nhiều cảm xúc và thể lực. Về cuối, McKay gây ấn tượng 
+                                bởi dáng đi lảo đảo sau nhiều gian khổ, đôi mắt hơi dại đi nhưng vẫn 
+                                thể hiện quyết tâm về đích. Để nhập vai, diễn viên phải chuẩn bị trong 
+                                tám tháng, từ phần thoại tới những cảnh di chuyển trên đồng trống, 
+                                khi chiến hào, vật thể chưa xuất hiện. Trên Vox, Sam Mendes cho biết 
+                                chủ động mời hai diễn viên ít tên tuổi để không phân tán sự chú ý khán 
+                                giả: "Chúng tôi muốn tạo cảm giác đó là hai chàng trai trẻ trong hai 
+                                triệu người, và họ chẳng có gì đặc biệt. Họ có vẻ đời thường".
+                                <br>
+                                <img src="./assets/img/1917-2.jpg" alt="1917"> 
+                                <br>
+                                Biên kịch khéo sắp xếp cá tính và một xung đột nhỏ để hai nhân vật có 
+                                màu sắc riêng. Tom giàu cảm xúc, hăm hở tham gia nhiệm vụ để cứu anh, 
+                                còn Will ngại ngần hơn do vừa toàn mạng sau trận Somme dữ dội năm 1916. 
+                                Chi tiết nhỏ đánh dấu sự tinh tế của kịch bản là cảnh Will - lớn tuổi 
+                                hơn - quyết định là người đầu tiên ló đầu khỏi hàng rào khi ra vùng 
+                                giao tranh. Một cảnh sau đó cũng cho thấy quyết định của hai nhân vật 
+                                ăn khớp cá tính ban đầu họ thể hiện.
+                                <br>
+                                Ngoài ra, Mendes mời nhiều tên tuổi như Colin Firth, Mark Strong, 
+                                Richard Madden và Benedict Cumberbatch đóng vai phụ để tăng giá trị 
+                                tác phẩm. Trong đó, Firth và Cumberbatch xuất hiện ở hai cảnh quan 
+                                trọng, mở đầu và khép lại mạch chính câu chuyện.
+                                <br>
+                                Ra mắt tháng 12/2019, 1917 gia nhập đường đua giải thưởng khá muộn. 
+                                Tuy nhiên, tác phẩm nhanh chóng nổi bật nhờ những đánh giá tích cực. 
+                                Sau chiến thắng ở Quả Cầu Vàng và một số giải, phim trở thành ứng viên 
+                                lớn ở Oscar 2020. Trước thềm lễ trao giải sáng 10/2 (giờ Việt Nam), 
+                                nhiều báo dự đoán hạng mục "Phim xuất sắc" là cuộc cạnh tranh của 1917 
+                                và Parasite. Trên toàn cầu, tác phẩm cũng đạt doanh thu khả quan với 
+                                256 triệu USD, trong khi kinh phí 100 triệu USD, tiếp nối xu hướng gần 
+                                đây là các phim nổi trội ở mùa giải thưởng (như Joker, Parasite) cũng 
+                                thu hút công chúng.
+                            </div>
+                            <div class="grid sub-post-meta">
+                                <div class="row">
+                                    <div class="col l-6 m-6 sm-6 entry-tags">
+                                        <p>
+                                            <i class="ti-tag"></i>
+                                            Tags: Historical, Drama
+                                        </p>
+                                    </div>
+                                    <div class="col l-6 m-6 sm-6 sub-post-share">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook icons"></i>
+                                        </a>
+                                        <a href="http://google.com/">
+                                            <i class="ti-google icons"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram icons"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-blog-paper">
+                            <div class="row">
+                                <div class="col l-10 m-4 sm-0"></div>
+                                <div class="col l-2 m-8 sm-12">
+                                    <a href="./Arcane.html">Next Post <i class="ti-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-post-list">
+                            <h3>you may also like</h3>
+                            <div class="row">
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Arcane-img.jpg" alt="Arcane">
+                                    <a href="./Arcane.html">Review Series 'Arcane': Nợ Cũ Phải Trả của Netflix</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Eternals-img.png" alt="Eternals">
+                                    <a href="./Eternals.html">'Eternals': Chủng Tộc Bất Tử</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Invisible-man-img.jpg" alt="Invisible Man">
+                                    <a href="./Invisible-man.html">'The Invisible Man': Tiếng nói nữ quyền về cuộc sống tự do</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-post-comments">
+                            <h3 class="comments-title">0 comments</h3>
+                            <div class="comments-holder">
+                                <ol class="comments-list">
+                                    <!-- comment 1 -->
+                                    <!-- <li class="grid comment">
+                                        <div class="row">
+                                            <div class="col l-1 avatar-img">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="col l-11 comment-block">
+                                                <div class="comment-header">
+                                                    <div class="user"></div>
+                                                    <div class="date-time"></div>
+                                                </div>
+                                                <p class="comment-content"></p>
+                                            </div>
+                                        </div>
+                                    </li> -->
+                                    <!-- end comment -->
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-1 m-0 sm-0"></div>
+                    <div class="col l-3 m-12 sm-12 sidebar-content">
+                        <div class="row">
+                            <div class="col l-12 sm-12 widget trailer">
+                                <h4 class="widget-title"><span>trailer</span></h4>
+                                <div class="video-trailer">
+                                    <video width="100%" height="100%" controls autoplay muted>
+                                        <source src="./assets/video/1917.mp4" type="video/mp4">
+                                        Your browser does not support HTML video.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget follow-us">
+                                <h4 class="widget-title"><span>follow us</span></h4>
+                                <div class="widget-content">
+                                    <div class="widget-list">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                        <a href="https://twitter.com/">
+                                            <i class="ti-twitter"></i>
+                                        </a>
+                                        <a href="https://www.google.com/">
+                                            <i class="ti-google"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/">
+                                            <i class="ti-youtube"></i>
+                                        </a>
+                                        <a href="https://github.com/">
+                                            <i class="ti-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget labels">
+                                <h4 class="widget-title"><span>labels</span></h4>
+                                <div class="widget-content">
+                                   <span class="label"><a href="./Action-category.html">Action</a></span>
+                                    <span class="label"><a href="./Adventure-category.html">Adventure </a></span>
+                                    <span class="label"><a href="./Gangter-category.html">Crime & Gangster</a></span>
+                                    <span class="label"><a href="./Comedy-category.html">Comedy</a></span>
+                                    <span class="label"><a href="./Horror-category.html">Horror</a></span>
+                                    <span class="label"><a href="./Drama-category.html">Drama</a></span>
+                                    <span class="label"><a href="./Historical-category.html">Historical</a></span>
+                                    <span class="label"><a href="./Musical-Dance-category.html">Musical & Dance</a></span>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget recent-posts">
+                                <h4 class="widget-title"><span>recent posts</span></h4>
+                                <div class="row widget-content side-list">
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Arcane-img.jpg" alt="Arcane Jinx">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Arcane.html">Review Series Arcane</a></h4>
+                                                <p>29 Nov 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Eternals-img.png" alt="Eternals">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Eternals.html">Review: ETERNALS</a></h4>
+                                                <p>November 5 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/The-medium-img.jpg" alt="The medium">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Medium.html">Review The Medium</a></h4>
+                                                <p>July 10 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: content -->
+        <div class="line"></div>
+        <!-- Begin: footer -->
+        <div id="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-12 sm-12 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <div class="col l-8 m-12 sm-12 footer-logo">
+                        <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: footer -->
+    </div>
+    <!-- login / register -->
+    <div id="login-register" onclick="login_open()">
+        <div class="login-container fadeInDown" id="login">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
+            <div class="login-footer fadeIn fourth">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="login-container fadeInDown" id="register">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
+        </div>
+    </div>
+    <div class="to-top">
+        <a href="#main"><i class="ti-angle-up"></i></a>
+    </div>
+     <!-- js -->
+    <script src="./assets/javascript/script.js"></script>
+</body>
+</html>

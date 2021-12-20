@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">    
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- main -->
+    <div id="main">
+        <!-- Begin: header -->
+        <div id="header">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-0 sm-0 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <ul class="col l-8 m-0 sm-0 nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="">Discover</a></li>
+                        <li>
+                            <a href="#">Category</a>
+                            <ul class="sub-nav">
+                                <li><a href="./Action-category.html">Action</a></li>
+                                <li><a href="./Adventure-category.html">Adventure</a></li>
+                                <li><a href="./Comedy-category.html">Comedy</a></li>
+                                <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                <li><a href="./Drama-category.html">Drama</a></li>
+                                <li><a href="./Historical-category.html">Historical</a></li>
+                                <li><a href="./Horror-category.html">Horror</a></li>
+                                <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <!-- navigation bar -->
+                    <div class="col l-0 m-2 sm-2 navbar-btn">
+                        <button onclick="nav_open()" type="button"><i class="ti-menu-alt"></i></button>
+                    </div>
+                    <!-- login -->
+                    <div class="col l-0 m-7 sm-6"></div>
+                    <div class="col l-1 m-2 sm-3 login-btn">
+                        <button onclick="login_open()">
+                            <i class="ti-user"></i>
+                            <span>login</span>
+                        </button>
+                    </div>
+                    <!-- search -->
+                    <div class="col l-1 m-1 sm-1 search-box">
+                        <a href="./search.html" class="button"><i class="ti-search"></i></a>
+                    </div>
+                    <!-- navigation on mobile & tablet -->
+                    <div class="nav-overlay" onclick="nav_exit()"></div>
+                    <div class="nav-mobile-tablet js-nav-mobile-tablet">
+                        <div class="social-list">
+                            <a href="https://www.facebook.com/">
+                                <i class="ti-facebook icons"></i>
+                            </a>
+                            <a href="http://google.com/">
+                                <i class="ti-google icons"></i>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <i class="ti-instagram icons"></i>
+                            </a>
+                            <a href="https://github.com/">
+                                <i class="ti-github icons"></i>
+                            </a>
+                        </div>
+                        <button type="button" onclick="nav_exit()" class="nav-mobile-tablet-close"><i class="ti-close"></i></button>
+                        <ul class="nav-list-mobile-tablet">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="">Discover</a></li>
+                            <li>
+                                <a href="#" onclick="category_open()">Category</a>
+                                <ul class="sub-nav-mobile-tablet">
+                                    <li><a href="./Action-category.html">Action</a></li>
+                                    <li><a href="./Adventure-category.html">Adventure</a></li>
+                                    <li><a href="./Comedy-category.html">Comedy</a></li>
+                                    <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                    <li><a href="./Drama-category.html">Drama</a></li>
+                                    <li><a href="./Historical-category.html">Historical</a></li>
+                                    <li><a href="./Horror-category.html">Horror</a></li>
+                                    <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
+                </div>
+            </div>
+        </div>
+        <!-- End: header -->
+        <div class="sub-web"></div>
+        <!-- Begin: content -->
+        <div id="content">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-8 m-12 sm-12 sub-main-content">
+                        <div class="sub-main-post">
+                            <div class="sub-post-header">
+                                <div class="sub-post-label">
+                                    <a href="">Adventure/Action</a>
+                                </div>
+                                <div class="sub-post-title">
+                                    <h2>Review: ETERNALS</h2>
+                                </div>
+                                <div class="sub-meta-date">
+                                    by <a href="https://www.facebook.com/cong.dang.January31/" title="author">Cong Dang</a>
+                                    - Nov 24 2021
+                                </div>
+                            </div>
+                            <div class="sub-post-entry">
+                                <p class="italic-text">Eternals: Chủng Tộc Bất Tử là bộ phim siêu anh 
+                                    hùng tiếp theo của Marvel trong giai đoạn 4 của MCU, Eternals là 
+                                    tác phẩm vô cùng ý nghĩa vì nó bám sát theo đầu truyện Eternals 
+                                    của Jack Kirby được xuất bản vào tháng 7 năm 1976.</p>
+                                Eternals: Chủng Tộc Bất Tử là bộ phim siêu anh hùng tiếp theo của 
+                                Marvel trong giai đoạn 4 của MCU, Eternals là tác phẩm vô cùng ý nghĩa 
+                                vì nó bám sát theo đầu truyện Eternals của Jack Kirby được xuất bản 
+                                vào tháng 7 năm 1976.
+                                Được đạo diễn bởi nghệ sĩ từng đoạt giải Oscar Chloe Zhao, Eternals 
+                                kể về một nhóm người bất tử đã tồn tại trên Trái đất trong 35.000 năm. 
+                                Phim có sự góp mặt của dàn cast hạng AAA từ Richard Madden đến Angelina 
+                                Jolie. Còn bây giờ hãy cùng Ví MoMo phân tích đoạn trailer của phim 
+                                về chủng tộc Eternals và tìm hiểu sâu hơn một chút về bom tấn sắp tới 
+                                của Marvel nhé!
+                                <br>
+                                <img src="./assets/img/Eternals1.jpg" alt="Eternals">
+                                <br>
+                                <br>
+                                <h3><p class="bold-text"> 1. Khởi đầu </p></h3>
+                                Ajak (Salma Hayek) đi tìm Ikaris (Richard Madden), vì các sự kiện của 
+                                Avengers Endgame đã cung cấp đủ năng lượng cho “The Emergence” bắt đầu. 
+                                Sự xuất hiện của các Eternals có nghĩa là đang có sự xuất hiện của các 
+                                Deviant, phản diện đối đầu của Eternals hoặc nhiều khả năng nó có nghĩa 
+                                là sự trở lại của Celestials, những người đã tạo ra cả Eternals và 
+                                Deviants. Dù bằng cách nào thì họ cũng có 7 ngày cho đến khi điều đó 
+                                xảy ra. 
+                                <br>
+                                <img src="./assets/img/Eternals2.jpg" alt="Eternals">
+                                Sersi (Gemma Chan) giải thích với Dane Whitman (Kit Harrington) rằng 
+                                Eternals đã ở trên Trái đất 7.000 năm. Họ đến để bảo vệ con người khỏi 
+                                Deviants. Nhưng không may Thanos cũng là một Deviant vì hắn là một 
+                                Eternal sở hữu bộ gen lệch lạc. Gen Deviant cũng được kết nối với nhiễm 
+                                sắc thể yếu tố X, điều này xảy ra trong phần phim X-Men: Apocalypse. 
+                                <br>
+                                <img src="./assets/img/Eternals3.jpg" alt="Eternals">
+                                Dane hỏi ngược lại vì muốn biết tại sao họ không giúp đỡ Avengers trong 
+                                việc ngăn chặn Thanos hoặc bất kỳ mối đe dọa quy mô lớn nào khác mà 
+                                con người phải đối mặt trong thời gian đó. Cô nói với anh rằng họ đã 
+                                được Celestials hướng dẫn không được can thiệp vào bất kỳ sự kiện nào 
+                                mà loài người tạo ra. Trong trailer chúng ta có cái nhìn thoáng qua 
+                                về Arishem The Judge. Trong truyện tranh, Arishem là một trong hai 
+                                Celestials có quyền và khả năng đánh giá nền văn minh của hành tinh, 
+                                xác định hành tinh nào đáng được tồn tại và hành tinh nào sẽ bị huỷ diệt. 
+                                <br><br>
+                                <h3><p class="bold-text"> 2. Tập hợp Eternals</p></h3>  
+                                Ikaris nói với Ajak rằng họ cần tìm những người khác. Các Eternals đã 
+                                ẩn mình trên khắp thế giới kể từ khi họ đến đây 7.000 năm trước. Tiếp 
+                                sau đó, Phastos (Brian Tyree Henry) nâng con tàu của họ khỏi cát sa mạc.
+                                <br>
+                                <img src="./assets/img/Eternals4.jpg" alt="Eternals">
+                                Sau khi thấy một số quyền năng của Celestial họ hoạt động trở lại, một 
+                                Celestial liền xuất hiện, người này chính là Jemiah The Analyzer. 
+                                Trong comic, Jemiah the Judge có một lượng kiến thức vượt trội về nhiều 
+                                thứ bao gồm cả di truyền học và toán học. 
+                                <br>
+                                Thena được cho biết rằng Eternals sẽ không thể cứu bất kỳ ai trong số 
+                                những con người. Cắt cảnh chiến đấu nhiều hơn và một màn trình diễn 
+                                ấn tượng khác về sức mạnh của Ikaris. Những giây phút cuối cùng của 
+                                trailer bắt đầu vui vẻ hơn khi tất cả Eternals trên trái đất quy tụ. 
+                                Ikaris cho rằng Phastos có ngôi nhà vô cùng xịn và chiếc bàn có lẽ 
+                                là vibranium nhưng không phải vậy, Phastos thú thật rằng nó được mua 
+                                từ Ikea và bây giờ nó đã bị hỏng. 
+                                <br>
+                                <img src="./assets/img/Eternals5.jpg" alt="Eternals">
+                                <br><br>
+                                <h3><p class="bold-text"> 3. Deviant là thực thể gì?</p></h3> 
+                                Deviant là thiên địch với Eternals. Không giống như các Eternals có 
+                                sức mạnh giống như thần thánh và đẹp đẽ về mặt di truyền, Deviant một 
+                                số được sinh ra với những đột biến cung cấp cho họ sức mạnh siêu phàm 
+                                nhưng nhìn chung họ không mạnh bằng Eternals và họ cũng có vẻ ngoài 
+                                hơi quái dị. Đó là những gì chúng ta thấy trong trailer này. Các Deviant 
+                                rất thông minh và hiểu biết rất nhiều về vũ trụ, Skrulls cũng là một 
+                                trong những Deviant. Một bí mật ngẫu nhiên nho nhỏ hay hay đó là Deviant 
+                                ban đầu được tạo ra bởi Celestials như một nguồn thực phẩm.
+                                <br>
+                                <img src="./assets/img/Eternals6.jpg" alt="Eternals">
+                                <br><br>
+                                <h3><p class="bold-text"> 4. Chuyện gì sẽ xảy ra?</p></h3>
+                                Phần chính của câu chuyện Eternals có thể được đặt trong tiền cảnh MCU 
+                                ngày nay, phim sẽ tập trung giải thích vai trò của Eternals. Các 
+                                Eternals đã đến Trái Đất hàng năm trước và giúp nền văn minh nhân 
+                                loại trở nên tiến bộ hơn. Các dấu hiệu của Eternals cũng được hiển thị 
+                                ở Babylon cổ đại. 
+                                <br>
+                                <img src="./assets/img/Eternals7.jpg" alt="Eternals">
+                                <br>
+                                Trailer không cung cấp quá nhiều chi tiết thông tin về những thứ gì 
+                                xảy ra với các Eternals trong quá khứ, nhưng nó cho thấy hầu hết trong 
+                                số chúng đã tách ra và sống rải rác trên Trái Đất. Sersi sống ở Anh 
+                                và có lẽ đây cũng là nơi sinh sống của Dane Whitman và Kingo, Druig 
+                                sống cô lập trong một khu rừng trước khi những người còn lại của Eternals 
+                                đến gặp anh ta. Trong khi đó, Thena và Gilgamesh (Don Lee) sống cùng nhau. Không rõ Ikaris, Sprite và Ajak đang làm gì trong thời điểm hiện tại, nhưng có lẽ họ cũng đang làm những nhiệm vụ của riêng mình.
+                                <br>
+                                <img src="./assets/img/Eternals8.jpg" alt="Eternals">
+                                <br>
+                                Lập trường không trực tiếp tham gia vào sự kiện ở Trái đất của Eternals 
+                                cuối cùng sẽ thay đổi khi sự xuất hiện của một mối đe dọa lớn - sự trở 
+                                lại của Deviant. Từ hàng ngàn năm trước, loài Deviant luôn muốn xâm 
+                                chiếm Trái Đất, nhưng đều được ngăn chặn bởi các Eternals. 
+                                <br>
+                                Celestials chính là người sáng tạo ra những Eternals và Deviants bởi 
+                                vì vậy nhiều khả năng rằng họ sẽ xuất hiện trong bộ phim này và đây 
+                                cũng có thể là cách mà Marvel đặt nền tảng cho các dị nhân nhập vũ trụ 
+                                MCU (Celestials cũng chính là những người gieo mầm gen X để tạo ra dị 
+                                nhân trong truyện tranh).
+                                <br>
+                                <img src="./assets/img/Eternals9.jpg" alt="Eternals">
+                                Celestials cũng đã từng xuất hiện trong Guardians of the Galaxy - Hành 
+                                tinh mà The Collectors chiếm đóng là  đầu của một Celestial đã chết 
+                                được gọi là Knowhere. Bởi vậy có thể suy đoán rằng Eternals sẽ dựa vào 
+                                sức mạnh của các Celestials chiến đấu chống lại giống loài Deviant và 
+                                giải thích những gì xảy ra với Celestial đã chết và trở thành hành tinh 
+                                Knowhere. 
+                                <br>
+                                Hãy cùng đợi đến tháng 11 năm nay để xem phim chiếu rạp này sẽ khởi 
+                                đầu của toàn bộ vũ trụ Marvel sẽ bắt đầu như thế nào nhé! Theo dõi 
+                                blog để cập nhật những tin tức điện ảnh mới nhất.
+                            </div>
+                            <div class="grid sub-post-meta">
+                                <div class="row">
+                                    <div class="col l-6 m-6 sm-6 entry-tags">
+                                        <p>
+                                            <i class="ti-tag"></i>
+                                            Tags: Adventure, Action
+                                        </p>
+                                    </div>
+                                    <div class="col l-6 m-6 sm-6 sub-post-share">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook icons"></i>
+                                        </a>
+                                        <a href="http://google.com/">
+                                            <i class="ti-google icons"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram icons"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-blog-paper">
+                            <div class="row">
+                                <div class="col l-10 m-4 sm-0"></div>
+                                <div class="col l-2 m-8 sm-12">
+                                    <a href="./Invisible-man.html">Next Post <i class="ti-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-post-list">
+                            <h3>you may also like</h3>
+                            <div class="row">
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Invisible-man-img.jpg" alt="Invisible Man">
+                                    <a href="./Invisible-man.html">'The Invisible Man': Tiếng nói nữ quyền về cuộc sống tự do</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Joker-img.jpg" alt="Joker">
+                                    <a href="./Joker.html">'Joker': Tiếng nói thức tỉnh lương tri để xã hội không có những “Gã hề”</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Little-women-img.jpg" alt="Little Women">
+                                    <a href="./Little-Women.html">'Little Women' - Tác phẩm đẹp đẽ về tình chị em và thiên tính nữ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-post-comments">
+                            <h3 class="comments-title">0 comments</h3>
+                            <div class="comments-holder">
+                                <ol class="comments-list">
+                                    <!-- comment 1 -->
+                                    <!-- <li class="grid comment">
+                                        <div class="row">
+                                            <div class="col l-1 avatar-img">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="col l-11 comment-block">
+                                                <div class="comment-header">
+                                                    <div class="user"></div>
+                                                    <div class="date-time"></div>
+                                                </div>
+                                                <p class="comment-content"></p>
+                                            </div>
+                                        </div>
+                                    </li> -->
+                                    <!-- end comment -->
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-1 m-0 sm-0"></div>
+                    <div class="col l-3 m-12 sm-12 sidebar-content">
+                        <div class="row">
+                            <div class="col l-12 sm-12 widget trailer">
+                                <h4 class="widget-title"><span>trailer</span></h4>
+                                <div class="video-trailer">
+                                    <video width="100%" height="100%" controls autoplay muted loop>
+                                        <source src="./assets/video/Eternals.mp4" type="video/mp4">
+                                        Your browser does not support HTML video.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget follow-us">
+                                <h4 class="widget-title"><span>follow us</span></h4>
+                                <div class="widget-content">
+                                    <div class="widget-list">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                        <a href="https://twitter.com/">
+                                            <i class="ti-twitter"></i>
+                                        </a>
+                                        <a href="https://www.google.com/">
+                                            <i class="ti-google"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/">
+                                            <i class="ti-youtube"></i>
+                                        </a>
+                                        <a href="https://github.com/">
+                                            <i class="ti-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget labels">
+                                <h4 class="widget-title"><span>labels</span></h4>
+                                <div class="widget-content">
+                                    <span class="label"><a href="./Action-category.html">Action</a></span>
+                                    <span class="label"><a href="./Adventure-category.html">Adventure </a></span>
+                                    <span class="label"><a href="./Gangter-category.html">Crime & Gangster</a></span>
+                                    <span class="label"><a href="./Comedy-category.html">Comedy</a></span>
+                                    <span class="label"><a href="./Horror-category.html">Horror</a></span>
+                                    <span class="label"><a href="./Drama-category.html">Drama</a></span>
+                                    <span class="label"><a href="./Historical-category.html">Historical</a></span>
+                                    <span class="label"><a href="./Musical-Dance-category.html">Musical & Dance</a></span>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget recent-posts">
+                                <h4 class="widget-title"><span>recent posts</span></h4>
+                                <div class="row widget-content side-list">
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Arcane-img.jpg" alt="Arcane Jinx">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Arcane.html">Phân tích tập 9 Arcane</a></h4>
+                                                <p>29 Nov 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Eternals-img.png" alt="Eternals">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Eternals.html">Review: ETERNALS</a></h4>
+                                                <p>November 5 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/The-medium-img.jpg" alt="The medium">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Medium.html">Review The Medium</a></h4>
+                                                <p>July 10 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: content -->
+        <div class="line"></div>
+        <!-- Begin: footer -->
+        <div id="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-12 sm-12 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <div class="col l-8 m-12 sm-12 footer-logo">
+                        <a href="./index.html"><img src="assets/img/logo.jpg" alt="logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: footer -->
+    </div>
+    <!-- login / register -->
+    <div id="login-register" onclick="login_open()">
+        <div class="login-container fadeInDown" id="login">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
+            <div class="login-footer fadeIn fourth">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="login-container fadeInDown" id="register">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
+        </div>
+    </div>
+    <div class="to-top">
+        <a href="#main"><i class="ti-angle-up"></i></a>
+    </div>
+     <!-- js -->
+    <script src="./assets/javascript/script.js"></script>
+</body>
+</html>

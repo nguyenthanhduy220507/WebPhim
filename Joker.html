@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">    
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- main -->
+    <div id="main">
+        <!-- Begin: header -->
+        <div id="header">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-0 sm-0 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <ul class="col l-8 m-0 sm-0 nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="">Discover</a></li>
+                        <li>
+                            <a href="#">Category</a>
+                            <ul class="sub-nav">
+                                <li><a href="./Action-category.html">Action</a></li>
+                                <li><a href="./Adventure-category.html">Adventure</a></li>
+                                <li><a href="./Comedy-category.html">Comedy</a></li>
+                                <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                <li><a href="./Drama-category.html">Drama</a></li>
+                                <li><a href="./Historical-category.html">Historical</a></li>
+                                <li><a href="./Horror-category.html">Horror</a></li>
+                                <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <!-- navigation bar -->
+                    <div class="col l-0 m-2 sm-2 navbar-btn">
+                        <button onclick="nav_open()" type="button"><i class="ti-menu-alt"></i></button>
+                    </div>
+                    <!-- login -->
+                    <div class="col l-0 m-7 sm-6"></div>
+                    <div class="col l-1 m-2 sm-3 login-btn">
+                        <button onclick="login_open()">
+                            <i class="ti-user"></i>
+                            <span>login</span>
+                        </button>
+                    </div>
+                    <!-- search -->
+                    <div class="col l-1 m-1 sm-1 search-box">
+                        <a href="./search.html" class="button"><i class="ti-search"></i></a>
+                    </div>
+                    <!-- navigation on mobile & tablet -->
+                    <div class="nav-overlay" onclick="nav_exit()"></div>
+                    <div class="nav-mobile-tablet js-nav-mobile-tablet">
+                        <div class="social-list">
+                            <a href="https://www.facebook.com/">
+                                <i class="ti-facebook icons"></i>
+                            </a>
+                            <a href="http://google.com/">
+                                <i class="ti-google icons"></i>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <i class="ti-instagram icons"></i>
+                            </a>
+                            <a href="https://github.com/">
+                                <i class="ti-github icons"></i>
+                            </a>
+                        </div>
+                        <button type="button" onclick="nav_exit()" class="nav-mobile-tablet-close"><i class="ti-close"></i></button>
+                        <ul class="nav-list-mobile-tablet">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="">Discover</a></li>
+                            <li>
+                                <a href="#" onclick="category_open()">Category</a>
+                                <ul class="sub-nav-mobile-tablet">
+                                    <li><a href="./Action-category.html">Action</a></li>
+                                    <li><a href="./Adventure-category.html">Adventure</a></li>
+                                    <li><a href="./Comedy-category.html">Comedy</a></li>
+                                    <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                    <li><a href="./Drama-category.html">Drama</a></li>
+                                    <li><a href="./Historical-category.html">Historical</a></li>
+                                    <li><a href="./Horror-category.html">Horror</a></li>
+                                    <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
+                </div>
+            </div>
+        </div>
+        <!-- End: header -->
+        <div class="sub-web"></div>
+        <!-- Begin: content -->
+        <div id="content">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-8 m-12 sm-12 sub-main-content">
+                        <div class="sub-main-post">
+                            <div class="sub-post-header">
+                                <div class="sub-post-label">
+                                    <a href="./Gangter-category.html">Crime/Drama </a>
+                                </div>
+                                <div class="sub-post-title">
+                                    <h2>'Joker': Tiếng nói thức tỉnh lương tri để xã hội không có những “Gã hề”</h2>
+                                </div>
+                                <div class="sub-meta-date">
+                                    by <a href="https://www.facebook.com/cong.dang.January31/" title="author">Cong Dang</a>
+                                    - March 04 2021
+                                </div>
+                            </div>
+                            <div class="sub-post-entry">
+                                <p class="bold-text"> Từ một con người thất bại, vô danh, Arthur 
+                                    Fleck bỗng trở thành một tội phạm nguy hiểm được biết đến với 
+                                    biệt danh Joker, hắn kích động bạo lực và gây nên tình cảnh bất 
+                                    ổn, hỗn loạn.</p>
+                                <br>
+                                <img src="./assets/img/Joker.jpg" alt="Joker">
+                                <p class="italic-text text-center">“Joker” là một phim tâm lý giật gân của đạo 
+                                    diễn người Mỹ Todd Phillips</p>
+                                <br>
+                                “Joker” là một phim tâm lý giật gân của đạo diễn người Mỹ Todd 
+                                Phillips. Chuyện phim dựa trên những nhân vật của hãng truyện tranh 
+                                DC Comics, trong phim, tài tử Joaquin Phoenix vào vai nam chính 
+                                Joker, đưa lại cho người xem hình dung về quá trình tạo nên một 
+                                nhân vật phản diện gây ám ảnh trên màn bạc.
+                                <br>
+                                Lấy bối cảnh năm 1981, chuyện phim theo chân nhân vật Arthur Fleck, 
+                                một diễn viên hài thất bại trong những nỗ lực gây dựng sự nghiệp, 
+                                dần dần, dưới sức nặng của những áp lực và bi kịch xảy tới trong đời 
+                                sống cá nhân, người đàn ông này chìm vào điên loạn, mất trí và quyết 
+                                định “trả thù đời”.
+                                <br>
+                                Từ một con người thất bại, vô danh, Arthur Fleck bỗng trở thành một 
+                                tội phạm nguy hiểm được biết đến với biệt danh Joker, hắn kích động 
+                                bạo lực và gây nên tình cảnh bất ổn, hỗn loạn trong thành phố Gotham 
+                                vốn đang phải oằn mình đối diện với rất nhiều vấn đề như thất nghiệp, 
+                                nghèo đói, tội phạm...
+                                <br>
+                                Đạo diễn Todd Phillips bắt đầu lên ý tưởng thực hiện “Joker” từ năm 
+                                2016 và dành một năm sau đó để thực hiện kịch bản cùng với các cộng sự. 
+                                Bộ phim “Joker” chịu ảnh hưởng từ những bài bình phân tích tâm lý 
+                                nhân vật phản diện Joker và những bộ phim của đạo diễn Martin Scorsese 
+                                như “Taxi Driver” hay “The King of Comedy”.
+                                <br>
+                                Bộ phim dù xoay quanh một nhân vật được sáng tạo ra trước tiên trong 
+                                thể loại truyện tranh nhưng kỳ thực lại không tìm nguồn cảm hứng từ 
+                                bất cứ một cuốn truyện tranh nào.
+                                <br>
+                                <img src="./assets/img/Joker1.jpg" alt="Joker">
+                                <p class="italic-text text-center">“Joker” từng được công chiếu tại LHP Venice 
+                                    (Ý) và giành giải Sư tử vàng cao quý nhất</p>
+                                <br>
+                                “Joker” từng được công chiếu tại LHP Venice (Ý) và giành giải Sư tử 
+                                vàng cao quý nhất. Phim sau đó được ra rạp rộng rãi tại nhiều quốc 
+                                gia và đã thành công lớn về mặt doanh thu. Với kinh phí sản xuất vào 
+                                khoảng gần 70 triệu USD, phim thu về tới hơn 1 tỷ USD. Khi mới ra 
+                                rạp, phim đã gây nên những sự phân cực trong giới phê bình, truyền 
+                                thông và công chúng.
+                                <br>
+                                Bên cạnh những lời khen ngợi dành cho diễn xuất của tài tử Joaquin 
+                                Phoenix, cho nhạc phim, cho nghệ thuật quay phim... được đưa ra rất 
+                                nhiều; thì nội dung u ám, đen tối, cách khắc họa những chứng bệnh 
+                                tâm thần, cách xử lý vấn nạn bạo lực trong phim lại làm dấy lên những 
+                                lo ngại, chỉ trích.
+                                <br>
+                                Khi “Joker” mới ra rạp, người ta đã lo lắng rằng bộ phim u tối xoay 
+                                quanh một nhân vật phản diện điên loạn sẽ làm gia tăng bạo lực trong 
+                                thế giới thực, làm kích động tâm lý người xem.
+                                <br>
+                                Rạp chiếu phim ở thành phố Aurora, bang Colorado, Mỹ, nơi từng xảy 
+                                ra vụ xả súng kinh hoàng hồi năm 2012 khi công chiếu bộ phim “The 
+                                Dark Knight Rises” đã quyết định không chiếu “Joker” dù đây là phim 
+                                ăn khách.
+                                <br>
+                                Vượt qua những sự lo ngại và tranh cãi, bộ phim đã xưng vương ngoài 
+                                phòng vé, trở thành phim chiếu hạn chế đầu tiên đạt mức doanh số hơn 
+                                1 tỷ USD trong lịch sử điện ảnh. “Joker” là phim có doanh thu cao 
+                                thứ 7 trong năm 2019 và đứng thứ 32 trong số những phim có doanh 
+                                thu cao nhất mọi thời đại.
+                                <br>
+                                “Joker” nhận về vô số giải thưởng. Tại giải Oscar, phim được đề cử ở 
+                                11 hạng mục trong đó có những hạng mục quan trọng như Phim - Đạo diễn 
+                                - Nam chính xuất sắc nhất.
+                                <br>
+                                <img src="./assets/img/Joker2.jpg" alt="Joker">
+                                <p class = "italic-text text-center">Thời điểm đầu ra rạp, “Joker” làm dấy lên 
+                                    tranh cãi về những hệ lụy mà một bộ phim u tối như thế có thể 
+                                    gây ra </p>
+                                <br>
+                                Nếu thời điểm đầu ra rạp, “Joker” làm dấy lên tranh cãi về những hệ 
+                                lụy mà một bộ phim u tối như thế có thể gây ra, thì giờ đây, khi 
+                                thời gian đã trôi qua, xét tới những thành công trong lĩnh vực 
+                                thương mại và nghệ thuật mà phim đã đạt được, người ta sẽ dễ dàng 
+                                quên đi những lo lắng, nghi ngại, tranh cãi, bởi chẳng có gì hay ho 
+                                ở đó, còn bộ phim lại quá thú vị.
+                                <br>
+                                Càng nổ ra tranh luận, người ta càng đi xem, những người từng chần 
+                                chừ ra rạp đã nhanh chóng đi xem phim sớm để biết người ta đang om 
+                                sòm tranh luận về điều gì. Và khi số lượng vé bán ra trên toàn thế 
+                                giới liên tục xác lập những con số doanh thu ấn tượng cho “Joker”, 
+                                câu trả lời cho mọi tranh cãi xung quanh bộ phim là: Có đùa không 
+                                vậy?!
+                                <br>
+                                Một phim đầy chất nghệ thật, tính nhân văn, sự thấm thía như “Joker” 
+                                sẽ không kích động những xúc cảm bồng bột, hời hợt, nếu có bất cứ sự 
+                                tiêu cực nào, thì nó chỉ khiến người xem cảm thấy chua xót cho một 
+                                cuộc đời, một con người đáng sợ và đáng thương như Arthur Fleck 
+                                (trước khi hắn trở thành Joker).
+                                <br>
+                                Bộ phim tạo cảm giác khó chịu, bất an, khổ sở một cách đầy chủ ý. 
+                                “Joker” không chứa đựng tính giải trí, nó không thuộc dòng phim 
+                                siêu anh hùng đang thống lĩnh thị trường.
+                                <br>
+                                Cho tới trước khi “Joker” được công chiếu, người ta vẫn còn có nói 
+                                về mối liên hệ của nhân vật chính với siêu anh hùng Người Dơi. 
+                                Nhưng kỳ thực bộ phim “Joker” tránh tất cả những mối liên hệ với các 
+                                bộ phim khác từng ra mắt trước đây về nhân vật siêu anh hùng Người 
+                                Dơi, tránh sự tương đồng với những cách nhập vai Joker trước đây, bởi 
+                                bộ phim này rất khác biệt về mặt thể loại.
+                                <br>
+                                <img src="./assets/img/Joker3.jpg" alt="Joker">
+                                <p class = "italic-text text-center">“Joker” thậm chí không nằm trong thể loại 
+                                    mà vốn dĩ nó thuộc về - phim chuyển thể từ nhân vật truyện tranh</p>
+                                <br>
+                                “Joker” thậm chí không nằm trong thể loại mà vốn dĩ nó thuộc về - 
+                                phim chuyển thể từ nhân vật truyện tranh. “Joker” là một câu chuyện 
+                                nguyên bản, mới mẻ, nhiều bất ngờ, rất sáng tạo kể về một nhân vật 
+                                “siêu phản diện”, đây thực sự là một chuyện phim điện ảnh thấm đẫm 
+                                chất nghệ thuật, trong đó, nhân vật chính là một cái tên đã gây “ám ảnh” màn bạc từ lâu.
+                                <br>
+                                Sức hấp dẫn từ nhân vật này rất lớn. Joker là hiện thân của sự hỗn 
+                                loạn, biểu đạt rất nhiều phong cách, vừa nhẹ nhàng vừa nặng nề, vừa 
+                                hài hước vừa đáng sợ. Những tài tử nổi tiếng như Jack Nicholson, 
+                                Heath Ledger, Jared Leto đều đã từng thử sức với vai diễn Joker và 
+                                để lại dấu ấn của riêng họ.
+                                <br>
+                                Joker qua diễn xuất của Joaquin Phoenix cười rất nhiều, đủ để đảm 
+                                bảo rằng chưa có diễn viên nào vào vai Joker cười nhiều và... điên 
+                                dại như thế. Điểm khác biệt của nhân vật này là sự ngớ ngẩn, ngốc 
+                                nghếch một cách... rất nghiêm túc đến mức khốn khổ, tội nghiệp.
+                                <br>
+                                Những người từng biết tới đạo diễn Todd Phillips qua những bộ phim 
+                                hài hước như “The Hangover” (Ba chàng ngự lâm - 2009) hay “Road 
+                                Trip” (Con đường tình dục - 2000) sẽ phải sửng sốt trước mức độ nghiêm 
+                                túc trong “Joker”.
+                                <br>
+                                Arthur Fleck khi còn chưa trở thành Joker điên loạn là một diễn viên 
+                                hài nghèo khó khao khát trở thành nghệ sĩ nổi tiếng. Nhưng thực tế 
+                                mãi bủa vây Arthur Fleck là sự cô độc và khốn cùng đến mức làm sụp 
+                                đổ một con người vốn đã có nhiều bất an.
+                                <br>
+                                <img src="./assets/img/Joker4.jpg" alt="Joker">
+                                <p class="italic-text text-center">Dù ước mơ lớn, nhưng Arthur Fleck chỉ có thể 
+                                    sống lay lắt, tạm bợ bằng việc đi làm thuê</p>
+                                <br>
+                                Dù ước mơ lớn, nhưng Arthur Fleck chỉ có thể sống lay lắt, tạm bợ bằng 
+                                việc đi làm thuê, nhập vai chú hề để đứng chào mời trước các cửa 
+                                hàng nhỏ hoặc tham gia những sự kiện nhỏ. Arthur sống trong căn hộ 
+                                nghèo nàn với người mẹ già không còn tỉnh táo. Thành phố giả tưởng 
+                                Gotham City trong giai đoạn u tối ấy rất thiếu việc làm, chuột bọ 
+                                khắp nơi, rác rưởi ngập phố.
+                                <br>
+                                Arthur Fleck chật vật trong cuộc sống ấy đã đủ khốn khổ rồi, nhưng 
+                                anh ta còn bị quấy phá, bị đánh hội đồng bởi những tên du côn nơi 
+                                góc phố, bởi những gã bảnh chọe say xỉn trên tàu điện ngầm. Dường 
+                                như ai cũng có thể bắt nạt Arthur Fleck, hắn bị dồn nén tới cùng 
+                                cực và bắt đầu nổ những phát súng đầu tiên để phản kháng lại sự xấu 
+                                xa của thế giới đang bủa vây quanh mình.
+                                <br>
+                                Arthur Fleck dành tình cảm cho một cô hàng xóm mà anh ta tin rằng 
+                                có lẽ cũng yêu thích và sẽ đáp lại tình cảm của mình, nhưng đó chỉ 
+                                là do... anh ta tưởng thế mà thôi. Arthur giữ một cuốn vở ghi chép 
+                                đầy những chất liệu hài mà anh ta tin rằng có thể giúp vun đắp nên 
+                                sự nghiệp nghệ sĩ hài nổi danh trong tương lai.
+                                <br>
+                                Arthur làm việc nỗ lực điên cuồng để chuẩn bị cho những lần biểu 
+                                diễn trên sân khấu, nhưng mọi cố gắng đều trở thành vô nghĩa, cuộc 
+                                sống vẫn không ngừng dồn nén, xô đẩy Arthur Fleck tới mức khốn cùng 
+                                cực điểm.
+                                <br>
+                                Cơ thể gầy gò, xoắn vặn đến đáng sợ, nhưng đôi lúc cũng đẹp đẽ đến 
+                                mức sửng sốt, đó chính là khả năng nhảy múa của tài tử Joaquin 
+                                Phoenix khi nhập vai Joker. Phoenix đã có những màn nhảy múa đầy 
+                                ấn tượng và mang nhiều ý nghĩa biểu tượng cho từng giai đoạn phát 
+                                triển tâm lý nhân vật.
+                                <br>
+                                <img src="./assets/img/Joker5.jpg" alt="Joker">
+                                <p class="italic-text text-center">Arthur Fleck là một gã cô độc thảm hại, 
+                                    gánh trên vai sức nặng của số phận bi kịch</p>
+                                <br>
+                                Arthur Fleck là một gã cô độc thảm hại, gánh trên vai sức nặng của 
+                                số phận bi kịch, là nạn nhân của hàng loạt những sự kiện dồn nén. 
+                                Bệnh cười không kiểm soát của Arthur bắt đầu từ khi còn nhỏ, khi 
+                                ấy, hắn đã bị cha dượng bạo hành. Sự cô độc lập dị của Arthur một 
+                                phần xảy ra bởi những bất công xã hội, sự nghèo khó, xã hội xung 
+                                quanh Arthur quá hỗn loạn, thiếu tình người, thiếu nhân văn...
+                                Ở đó, tất cả mọi người đều trở nên kinh khủng, mạnh ai nấy sống và 
+                                thậm chí chà đạp lên nhau để sống, từ người giàu cho tới người nghèo. 
+                                Sự hình thành nên Joker điên loạn và độc ác là một hệ lụy đáng buồn 
+                                và đáng thương.
+                                <br>
+                                Sau cùng, những người từng lo ngại “Joker” sẽ kích động bạo lực hẳn 
+                                đã an tâm, bởi bộ phim không ngồn ngộn năng lượng tiêu cực với vô 
+                                vàn cảnh tượng bạo lực máu me khủng khiếp như người ta vẫn sợ, ngược 
+                                lại, nó khiến người xem chùng xuống bởi sự khốn cùng của Arthur 
+                                Fleck, đó là một bộ phim có sức nặng và chiều sâu.
+                                Nhớ lại những tranh cãi om sòm thời gian đầu phim ra mắt, người ta 
+                                hẳn sẽ thấy đó giống như câu chuyện cười, còn gã hề phản diện Joker 
+                                từng reo rắc bao nỗi kinh hoàng trên màn bạc giờ lại khiến người 
+                                xem muốn khóc. Đó không phải là sự bào chữa, cảm thương sáo rỗng 
+                                cho một kẻ phản diện tàn ác, mà là sự chua xót khi chứng kiến một số 
+                                phận con người đã bị đẩy vào đường cùng.
+                                Vì thế, “Joker” là tiếng chuông cảnh tỉnh lương tri, khơi dậy lòng 
+                                nhân ái, để xã hội tránh khỏi ác mộng kinh hoàng gây ra bởi những 
+                                Joker.
+                            </div>
+                            <div class="grid sub-post-meta">
+                                <div class="row">
+                                    <div class="col l-6 m-6 sm-6 entry-tags">
+                                        <p>
+                                            <i class="ti-tag"></i>
+                                            Tags: Crime, Drama 
+                                        </p>
+                                    </div>
+                                    <div class="col l-6 m-6 sm-6 sub-post-share">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook icons"></i>
+                                        </a>
+                                        <a href="http://google.com/">
+                                            <i class="ti-google icons"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram icons"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-blog-paper">
+                            <div class="row">
+                                <div class="col l-10 m-4 sm-0"></div>
+                                <div class="col l-2 m-8 sm-12">
+                                    <a href="./Little-Women.html">Next Post <i class="ti-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-post-list">
+                            <h3>you may also like</h3>
+                            <div class="row">
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Little-women-img.jpg" alt="Little Women">
+                                    <a href="./Little-Women.html">'Little Women' - Tác phẩm đẹp đẽ về tình chị em và thiên tính nữ</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="assets/img/The-medium-img.jpg" alt="Medium">
+                                    <a href="./Medium.html">Review The Medium</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Pi-img.jpg" alt="Pi">
+                                    <a href="./Pi.html">'Life of Pi': Hành trình chông gai và những bài học vàng</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-post-comments">
+                            <h3 class="comments-title">0 comments</h3>
+                            <div class="comments-holder">
+                                <ol class="comments-list">
+                                    <!-- comment 1 -->
+                                    <!-- <li class="grid comment">
+                                        <div class="row">
+                                            <div class="col l-1 avatar-img">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="col l-11 comment-block">
+                                                <div class="comment-header">
+                                                    <div class="user"></div>
+                                                    <div class="date-time"></div>
+                                                </div>
+                                                <p class="comment-content"></p>
+                                            </div>
+                                        </div>
+                                    </li> -->
+                                    <!-- end comment -->
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-1 m-0 sm-0"></div>
+                    <div class="col l-3 m-12 sm-12 sidebar-content">
+                        <div class="row">
+                            <div class="col l-12 sm-12 widget trailer">
+                                <h4 class="widget-title"><span>trailer</span></h4>
+                                <div class="video-trailer">
+                                    <video width="100%" height="100%" controls autoplay muted loop>
+                                        <source src="./assets/video/Joker.mp4" type="video/mp4">
+                                        Your browser does not support HTML video.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget follow-us">
+                                <h4 class="widget-title"><span>follow us</span></h4>
+                                <div class="widget-content">
+                                    <div class="widget-list">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                        <a href="https://twitter.com/">
+                                            <i class="ti-twitter"></i>
+                                        </a>
+                                        <a href="https://www.google.com/">
+                                            <i class="ti-google"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/">
+                                            <i class="ti-youtube"></i>
+                                        </a>
+                                        <a href="https://github.com/">
+                                            <i class="ti-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget labels">
+                                <h4 class="widget-title"><span>labels</span></h4>
+                                <div class="widget-content">
+                                   <span class="label"><a href="./Action-category.html">Action</a></span>
+                                    <span class="label"><a href="./Adventure-category.html">Adventure </a></span>
+                                    <span class="label"><a href="./Gangter-category.html">Crime & Gangster</a></span>
+                                    <span class="label"><a href="./Comedy-category.html">Comedy</a></span>
+                                    <span class="label"><a href="./Horror-category.html">Horror</a></span>
+                                    <span class="label"><a href="./Drama-category.html">Drama</a></span>
+                                    <span class="label"><a href="./Historical-category.html">Historical</a></span>
+                                    <span class="label"><a href="./Musical-Dance-category.html">Musical & Dance</a></span>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget recent-posts">
+                                <h4 class="widget-title"><span>recent posts</span></h4>
+                                <div class="row widget-content side-list">
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Arcane-img.jpg" alt="Arcane Jinx">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Arcane.html">Review Series Arcane</a></h4>
+                                                <p>29 Nov 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Eternals-img.png" alt="Eternals">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Eternals.html">Review: ETERNALS</a></h4>
+                                                <p>November 5 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/The-medium-img.jpg" alt="The medium">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Medium.html">Review The The-Medium</a></h4>
+                                                <p>July 10 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: content -->
+        <div class="line"></div>
+        <!-- Begin: footer -->
+        <div id="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-12 sm-12 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <div class="col l-8 m-12 sm-12 footer-logo">
+                        <a href="./index.html"><img src="assets/img/logo.jpg" alt="logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: footer -->
+    </div>
+    <!-- login / register -->
+    <div id="login-register" onclick="login_open()">
+        <div class="login-container fadeInDown" id="login">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
+            <div class="login-footer fadeIn fourth">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="login-container fadeInDown" id="register">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
+        </div>
+    </div>
+    <div class="to-top">
+        <a href="#main"><i class="ti-angle-up"></i></a>
+    </div>
+     <!-- js -->
+    <script src="./assets/javascript/script.js"></script>
+</body>
+</html>

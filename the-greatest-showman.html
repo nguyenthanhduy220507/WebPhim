@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">    
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Maven+Pro:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- main -->
+    <div id="main">
+        <!-- Begin: header -->
+        <div id="header">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-0 sm-0 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <ul class="col l-8 m-0 sm-0 nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="">Discover</a></li>
+                        <li>
+                            <a href="#">Category</a>
+                            <ul class="sub-nav">
+                                <li><a href="./Action-category.html">Action</a></li>
+                                <li><a href="./Adventure-category.html">Adventure</a></li>
+                                <li><a href="./Comedy-category.html">Comedy</a></li>
+                                <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                <li><a href="./Drama-category.html">Drama</a></li>
+                                <li><a href="./Historical-category.html">Historical</a></li>
+                                <li><a href="./Horror-category.html">Horror</a></li>
+                                <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <!-- navigation bar -->
+                    <div class="col l-0 m-2 sm-2 navbar-btn">
+                        <button onclick="nav_open()" type="button"><i class="ti-menu-alt"></i></button>
+                    </div>
+                    <!-- login -->
+                    <div class="col l-0 m-7 sm-6"></div>
+                    <div class="col l-1 m-2 sm-3 login-btn">
+                        <button onclick="login_open()">
+                            <i class="ti-user"></i>
+                            <span>login</span>
+                        </button>
+                    </div>
+                    <!-- search -->
+                    <div class="col l-1 m-1 sm-1 search-box">
+                        <a href="./search.html" class="button"><i class="ti-search"></i></a>
+                    </div>
+                    <!-- navigation on mobile & tablet -->
+                    <div class="nav-overlay" onclick="nav_exit()"></div>
+                    <div class="nav-mobile-tablet js-nav-mobile-tablet">
+                        <div class="social-list">
+                            <a href="https://www.facebook.com/">
+                                <i class="ti-facebook icons"></i>
+                            </a>
+                            <a href="http://google.com/">
+                                <i class="ti-google icons"></i>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <i class="ti-instagram icons"></i>
+                            </a>
+                            <a href="https://github.com/">
+                                <i class="ti-github icons"></i>
+                            </a>
+                        </div>
+                        <button type="button" onclick="nav_exit()" class="nav-mobile-tablet-close"><i class="ti-close"></i></button>
+                        <ul class="nav-list-mobile-tablet">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="">Discover</a></li>
+                            <li>
+                                <a href="#" onclick="category_open()">Category</a>
+                                <ul class="sub-nav-mobile-tablet">
+                                    <li><a href="./Action-category.html">Action</a></li>
+                                    <li><a href="./Adventure-category.html">Adventure</a></li>
+                                    <li><a href="./Comedy-category.html">Comedy</a></li>
+                                    <li><a href="./Gangter-category.html">Crime/Gangster</a></li>
+                                    <li><a href="./Drama-category.html">Drama</a></li>
+                                    <li><a href="./Historical-category.html">Historical</a></li>
+                                    <li><a href="./Horror-category.html">Horror</a></li>
+                                    <li><a href="./Musical-Dance-category.html">Musical/Dance</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-logo">
+                    <a href="./index.html"><img src="./assets/img/logo.jpg" alt="logo"></a>
+                </div>
+            </div>
+        </div>
+        <!-- End: header -->
+        <div class="sub-web"></div>
+        <!-- Begin: content -->
+        <div id="content">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-8 m-12 sm-12 sub-main-content">
+                        <div class="sub-main-post">
+                            <div class="sub-post-header">
+                                <div class="sub-post-label">
+                                    <a href="./Musical-Dance-category.html">Musical/Drama </a>
+                                </div>
+                                <div class="sub-post-title">
+                                    <h2>'The Greatest Showman': vẻ đẹp của sự khác biệt</h2>
+                                </div>
+                                <div class="sub-meta-date">
+                                    by <a href="https://www.facebook.com/cong.dang.January31/" title="author">Cong Dang</a>
+                                    - March 04 2021
+                                </div>
+                            </div>
+                            <div class="sub-post-entry">
+                                The Greatest Showman (Tựa Việt: Bậc thầy của những ước mơ) dưới sự 
+                                chỉ đạo của Michael Gracey, là một tiết mục giải trí thuần túy bao 
+                                gồm 11 ca khúc đáng nhớ được sản xuất bởi bộ đôi tài năng Benj Pasek 
+                                và Justin Paul. Bộ phim là cuốn băng tua nhanh cuộc đời của P.T. 
+                                Barnum, ông tổ của các bầu show, đã được lược bỏ những chi tiết gây 
+                                tranh cãi xung quanh cuộc đời và sự nghiệp của ông. The Greatest 
+                                Showman là một dự án khá nguy hiểm nhưng nhờ vào sự dẫn dắt của đạo 
+                                diễn Michael Gracey và dàn diễn viên tuyệt vời (Hugh Jackman, Zac 
+                                Efron, Michelle Williams, Zendaya,...), bộ phim đã thể hiện được 
+                                những giá trị tưởng như đã cũ theo một cách vô cùng đặc biệt: đây là 
+                                câu chuyện ca ngợi sự đa dạng, sự bình đẳng giữa mọi người, mọi giống 
+                                loài.
+                                <img src="./assets/img/The-Greatest-Showman1.jpg" alt="Greatest Showman">
+                                <br><br>
+                                <h3><p class="bold-text"> Nội dung đơn giản</p></h3>
+                                Là một bộ phim âm nhạc giải trí thuần túy hướng tới đối tượng gia 
+                                đình, The Greatest Showman có nội dung khá đơn giản và được phủ lên 
+                                lớp bụi tiên như thế giới ma thuật, nơi phép màu luôn xảy đến với 
+                                những kẻ thiện lương.P.T. Barnum là con trai của một thợ may nghèo 
+                                khó. Cậu luôn khao khát được đứng dưới ánh đèn sân khấu và tỏa sáng. 
+                                Barnum gặp gỡ và đem lòng cảm mến Charity, con gái của một gia đình 
+                                quý tộc danh giá. Đến khi bố mất, Barnum phải lao ra đường kiếm sống 
+                                bằng đủ mọi nghề, cho tới một ngày cậu được người phụ nữ có khuôn 
+                                mặt kì dị cho một quả táo trong lúc đói meo. Đây là một mốc rất quan 
+                                trọng trong cuộc đời của Barnum vì chính khoảnh khắc này đã tạo 
+                                cảm hứng cho cậu để cho ra đời gánh xiếc Barnum. Sau này, Barnum và 
+                                Charity về sống với nhau bất chấp sự phản đối từ gia đình của 
+                                Charity. Họ có với nhau hai cô con gái (cũng là hai người tạo cảm 
+                                hứng lớn nhất của Barnum), nhưng cuộc sống của họ chỉ thực sự thay 
+                                đổi khi Barnum liều lĩnh vay một khoản tiền lớn để mở bảo tàng 
+                                chuyên trưng bày những mẫu vật kỳ lạ.Nhận ra những vật vô tri không 
+                                thể thu hút người xem, Barnum bắt đầu tìm kiếm và tập hợp một nhóm 
+                                người: hoặc có ngoại hình kỳ dị, hoặc bị người đời xa lánh, (tất cả 
+                                bọn họ đều có tài năng tiềm ẩn) và bắt đầu hành trình trở thành bầu 
+                                show danh tiếng nhất nước Mỹ. Khi đã có tiền và danh vọng trong 
+                                tay, Barnum muốn vứt bỏ quá khứ và xuất thân nghèo hèn. Anh gặp 
+                                Phillip Carlyle, một nhà biên kịch, kẻ thừa kế xuất thân từ giới 
+                                thượng lưu, mời cậu ta trở thành cộng sự và là một phần của gánh 
+                                xiếc. Không chỉ dừng lại ở đó, Barnum bắt đầu tour diễn dài ngày 
+                                với Jenny Lind, nàng “sơn ca Thụy Điển”. Cuộc đời của Barnum sẽ tiếp 
+                                tục như thế nào với gánh xiếc đang vấp phải rất nhiều sự phản đối 
+                                và nàng sơn ca lỡ đem lòng yêu anh?
+                                <br>
+                                <img src="./assets/img/The-Greatest-Showman.jpg" alt="Greatest Showman">
+                                <br>
+                                Mối tình của P.T. Barnum và Charity tạo nên rất nhiều cảm xúc và 
+                                có lẽ đây chính là một trong những khoảnh khắc nên thơ nhất trong 
+                                phim.
+                                <br>
+                                Lồng trong câu chuyện lớn về P.T.Barnum là những câu chuyện của các 
+                                nhân vật phụ. Câu chuyện về sự chối bỏ của những dị nhân trong gánh 
+                                xiếc, câu chuyện tình yêu vượt qua định kiến xã hội của Barnum và 
+                                Charity hay Phillip và Anne, câu chuyện về sự lạc lõng, sự tự do 
+                                hay hơn hết là những giấc mơ tuyệt đẹp. Tuy vật, do nhân vật chưa 
+                                được khai thác triệt để nên cảm xúc vẫn còn hời hợt và chưa tới. 
+                                Khán giả chưa thực sự hiểu rõ hay có sự gắn kết với các nhân vật 
+                                trong câu chuyện. Một số thành viên của gánh xiếc chỉ được xuất 
+                                hiện trong chốc lát, thậm chí còn không được giới thiệu tên. Điều 
+                                này ảnh hưởng khá nhiều tới tổng thể của bộ phim, mặc cho cách xử 
+                                lí mượt mà và những cảnh quay choáng ngợp và ánh sáng tuyệt vời thì 
+                                bộ phim vẫn thiếu đi chiều sâu tâm lí cần có.
+                                <br><br>
+                                <h3><p class="bold-text">  Dàn diễn viên xuất sắc </p></h3>
+                                Nếu đã từng tìm hiểu về Hugh Jackman, hẳn người xem cũng biết rằng 
+                                ngoài việc nổi tiếng với vai diễn Wolverine “hổ báo” thì tài tử này 
+                                cũng được biết đến như một diễn viên nhạc kịch kỳ cựu. Anh thậm chí 
+                                còn nhận được đề cử Oscar cho vai diễn Jean Valjean trong phim nhạc 
+                                kịch Les Misérables (2013) (đây cũng là đề cử Oscar duy nhất của 
+                                Hugh Jackman). Khả năng hát, nhảy, trình diễn của Hugh trong The 
+                                Greatest Showman xứng đáng với những lời khen ngợi không ngớt của 
+                                khán giả.Bên cạnh Hugh Jackman là bốn diễn viên phụ vô cùng nổi bật: 
+                                Michelle Williams, Zac Efron, Zendaya và Rebecca Ferguson. Họ có 
+                                những khoảnh khắc tỏa sáng riêng và là nhân tố nổi trội xuyên suốt 
+                                bộ phim.Michelle Williams, nữ diễn viên từng nhận tới 4 đề cử Oscar, 
+                                không gặp khó khăn gì với vai diễn Charity, vợ của P.T. Barnum. 
+                                Giọng hát của cô rất chắc và truyền cảm, đặc biệt trong soundtrack 
+                                “A Million Dreams” song ca với Hugh Jackman. Về phần Zac Efron, 
+                                chàng hoàng tử trong mơ của Hollywood như cá gặp nước khi được thể 
+                                hiện tài năng ca hát và vũ đạo. Anh và Zendaya đã có một màn trình 
+                                diễn vô cùng mãn nhãn về cả phần nhìn lẫn phần nghe với ca khúc 
+                                “Rewrite the Star”. Cựu công chúa Disney Zendaya thì ngày càng 
+                                thể hiện tiềm năng trở thành một nghệ sĩ đa tài với khả năng hát, 
+                                nhảy, múa, diễn xuất.
+                                <br>
+                                <img src="./assets/img/The-Greatest-Showman2.jpg" alt="Greatest Showman">
+                                <br>
+                                Zac Efron và Zendaya là cặp đôi có phản ứng hóa học rất tốt và 
+                                chính họ cũng bất ngờ về sự kết nối vô cùng tự nhiên giữa hai người.
+                                <br>
+                                Mỗi lần Rebecca Ferguson xuất hiện là khán giả tưởng như có thể 
+                                nhìn thấy ánh sáng hào quang của đại minh tinh toát ra từ người 
+                                cô ấy. Mặc dù không phải là người thể hiện ca khúc “Never Enough”, 
+                                chính diễn xuất đầy cảm xúc của Rebecca đã rung động trái tim khán 
+                                giả. Bên cạnh đó cũng phải nhắc tới màn đồng diễn của các thành viên 
+                                đoàn xiếc Barnum với bài hát “This is me”, đặc biệt là giọng ca nội 
+                                lực của Keala Settle.
+                            </div>
+                            <div class="grid sub-post-meta">
+                                <div class="row">
+                                    <div class="col l-6 m-6 sm-6 entry-tags">
+                                        <p>
+                                            <i class="ti-tag"></i>
+                                            Tags: Musical, Drama 
+                                        </p>
+                                    </div>
+                                    <div class="col l-6 m-6 sm-6 sub-post-share">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook icons"></i>
+                                        </a>
+                                        <a href="http://google.com/">
+                                            <i class="ti-google icons"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram icons"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-blog-paper">
+                            <div class="row">
+                                <div class="col l-10 m-4 sm-0"></div>
+                                <div class="col l-2 m-8 sm-12">
+                                    <a href="./spider-man-no-way-home.html">Next Post <i class="ti-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid sub-post-list">
+                            <h3>you may also like</h3>
+                            <div class="row">
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Spider-man-no-way-home-img.jpg" alt="Spider Man">
+                                    <a href="./spider-man-no-way-home.html">'Spider-Man: No Way Home'</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/Free-guy-img.jpg" alt="Free Guy">
+                                    <a href="./free-guy.html">'Free Guy' - khi người đàn ông mờ nhạt trở thành anh hùng</a>
+                                </div>
+                                <div class="col l-4 m-6 sm-12 sub-post-item">
+                                    <img src="./assets/img/1917-img.jpg" alt="1917">
+                                    <a href="./1917.html">'1917': Bộ mặt tàn khốc của chiến tranh</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-post-comments">
+                            <h3 class="comments-title">0 comments</h3>
+                            <div class="comments-holder">
+                                <ol class="comments-list">
+                                    <!-- comment 1 -->
+                                    <!-- <li class="grid comment">
+                                        <div class="row">
+                                            <div class="col l-1 avatar-img">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="col l-11 comment-block">
+                                                <div class="comment-header">
+                                                    <div class="user"></div>
+                                                    <div class="date-time"></div>
+                                                </div>
+                                                <p class="comment-content"></p>
+                                            </div>
+                                        </div>
+                                    </li> -->
+                                    <!-- end comment -->
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-1 m-0 sm-0"></div>
+                    <div class="col l-3 m-12 sm-12 sidebar-content">
+                        <div class="row">
+                            <div class="col l-12 sm-12 widget trailer">
+                                <h4 class="widget-title"><span>trailer</span></h4>
+                                <div class="video-trailer">
+                                    <video width="100%" height="100%" controls autoplay muted loop>
+                                        <source src="./assets/video/The-Greatest-Showman.mp4" type="video/mp4">
+                                        Your browser does not support HTML video.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget follow-us">
+                                <h4 class="widget-title"><span>follow us</span></h4>
+                                <div class="widget-content">
+                                    <div class="widget-list">
+                                        <a href="https://www.facebook.com/">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                        <a href="https://twitter.com/">
+                                            <i class="ti-twitter"></i>
+                                        </a>
+                                        <a href="https://www.google.com/">
+                                            <i class="ti-google"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/">
+                                            <i class="ti-instagram"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/">
+                                            <i class="ti-youtube"></i>
+                                        </a>
+                                        <a href="https://github.com/">
+                                            <i class="ti-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget labels">
+                                <h4 class="widget-title"><span>labels</span></h4>
+                                <div class="widget-content">
+                                 <span class="label"><a href="./Action-category.html">Action</a></span>
+                                    <span class="label"><a href="./Adventure-category.html">Adventure </a></span>
+                                    <span class="label"><a href="./Gangter-category.html">Crime & Gangster</a></span>
+                                    <span class="label"><a href="./Comedy-category.html">Comedy</a></span>
+                                    <span class="label"><a href="./Horror-category.html">Horror</a></span>
+                                    <span class="label"><a href="./Drama-category.html">Drama</a></span>
+                                    <span class="label"><a href="./Historical-category.html">Historical</a></span>
+                                    <span class="label"><a href="./Musical-Dance-category.html">Musical & Dance</a></span>
+                                </div>
+                            </div>
+                            <div class="col l-12 sm-12 widget recent-posts">
+                                <h4 class="widget-title"><span>recent posts</span></h4>
+                                <div class="row widget-content side-list">
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Arcane-img.jpg" alt="Arcane Jinx">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Arcane.html">Phân tích tập 9 Arcane</a></h4>
+                                                <p>29 Nov 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/Eternals-img.png" alt="Eternals">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Eternals.html">Review: ETERNALS</a></h4>
+                                                <p>November 5 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-12 side-item">
+                                        <div class="row">
+                                            <div class="col l-6 m-12 sm-12 side-img">
+                                                <img src="./assets/img/The-medium-img.jpg" alt="The medium">
+                                            </div>
+                                            <div class="col l-6 m-12 sm-12 side-item-text">
+                                                <h4><a href="./Medium.html">Review The Medium</a></h4>
+                                                <p>July 10 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: content -->
+        <div class="line"></div>
+        <!-- Begin: footer -->
+        <div id="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2 m-12 sm-12 social-list">
+                        <a href="https://www.facebook.com/">
+                            <i class="ti-facebook icons"></i>
+                        </a>
+                        <a href="http://google.com/">
+                            <i class="ti-google icons"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="ti-instagram icons"></i>
+                        </a>
+                        <a href="https://github.com/">
+                            <i class="ti-github icons"></i>
+                        </a>
+                    </div>
+                    <div class="col l-8 m-12 sm-12 footer-logo">
+                        <a href="./index.html"><img src="assets/img/logo.jpg" alt="logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: footer -->
+    </div>
+    <!-- login / register -->
+    <div id="login-register" onclick="login_open()">
+        <div class="login-container fadeInDown" id="login">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Or <a>sign up</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-login fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-login light-red-text"></span>
+            <input type="text" class="password-login fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-login light-red-text"></span>
+            <input onclick="check_regex()" type="submit" class="fadeIn fourth" value="Log In">
+            <div class="login-footer fadeIn fourth">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="login-container fadeInDown" id="register">
+            <div onclick="register_open()" class="switch-btn fadeIn first">Go back <a>login</a></div>
+            <button onclick="login_open()" class="login-close fadeIn first"><i class="ti-close"></i></button>
+            <input type="text" class="username-register fadeIn second" name="login" placeholder="username">
+            <span class="regex-username-register light-red-text"></span>
+            <input type="text" class="password-register fadeIn third" name="login" placeholder="password">
+            <span class="regex-password-register light-red-text"></span>
+            <input type="text" class="password-again fadeIn third" name="login" placeholder="repeat your password">
+            <span class="regex-password-again light-red-text"></span>
+            <input onclick="check_regex_submit()" type="submit" class="fadeIn fourth" value="Sign Up">
+        </div>
+    </div>
+    <div class="to-top">
+        <a href="#main"><i class="ti-angle-up"></i></a>
+    </div>
+     <!-- js -->
+    <script src="./assets/javascript/script.js"></script>
+</body>
+</html>
